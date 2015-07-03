@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html>
+<head>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8" />
+
+	
+		<meta http-equiv="X-UA-Compatible" content="IE=8; IE=9" />
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"http://support.jwplayer.com/customer/portal/articles/bam.nr-data.net","errorBeacon":"http://support.jwplayer.com/customer/portal/articles/bam.nr-data.net","licenseKey":"bceadb921a","applicationID":"3974850,3970295","transactionName":"JlpeF0ENCggEExtXTRZBXw5WEEkUDhNAVVRKXlI8UhASDQINUUcXFl1fFA==","queueTime":0,"applicationTime":145,"agent":"nr-632.min-5.js"/*tpa=http://support.jwplayer.com/customer/portal/articles/js-agent.newrelic.com/nr-632.min.js*/}</SCRIPT>
+<script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VQcFVlRACwoHUFlXBw=="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=s(e),f=c.length,u=i(a,o,r),d=0;f>d;d++)c[d].apply(u,n);return u}function a(t,e){f[t]=s(t).concat(e)}function s(t){return f[t]||[]}function c(){return n(e)}var f={};return{on:a,emit:e,create:c,listeners:s,_events:f}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t){try{i.console&&console.log(t)}catch(e){}}var n,r=t("ee"),o=t(1),i={};try{n=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(i.console=!0,-1!==n.indexOf("dev")&&(i.dev=!0),-1!==n.indexOf("nr_dev")&&(i.nrDev=!0))}catch(a){}i.nrDev&&r.on("internal-error",function(t){e(t.stack)}),i.dev&&r.on("fn-err",function(t,n,r){e(r.stack)}),i.dev&&(e("NR AGENT IN DEVELOPMENT MODE"),e("flags: "+o(i,function(t){return t}).join(", ")))},{1:23,ee:"QJf3ax"}],4:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(f){try{r("ierr",[f,(new Date).getTime(),!0])}catch(u){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(6),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,t(5),window.onerror=e;try{throw new Error}catch(f){"stack"in f&&(t(1),t(2),"addEventListener"in window&&t(3),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)&&t(4),s=!0)}i.on("fn-start",function(){s&&(c+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&c>0&&(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:10,2:9,3:7,4:11,5:3,6:24,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t){t("loader").features.ins=!0},{loader:"G9z0Bl"}],6:[function(t){function e(){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var n=t("ee"),r=t("handle"),o=t(1),i=t(2);t("loader").features.stn=!0,t(3),n.on("fn-start",function(t){var e=t[0];e instanceof Event&&(this.bstStart=Date.now())}),n.on("fn-end",function(t,e){var n=t[0];n instanceof Event&&r("bst",[n,e,this.bstStart,Date.now()])}),o.on("fn-start",function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),o.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),this.bstType])}),i.on("fn-start",function(){this.bstStart=Date.now()}),i.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),"requestAnimationFrame"])}),n.on("pushState-start",function(){this.time=Date.now(),this.startPath=location.pathname+location.hash}),n.on("pushState-end",function(){r("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),"addEventListener"in window.performance&&(window.performance.addEventListener("webkitresourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.webkitClearResourceTimings()},!1),window.performance.addEventListener("resourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.clearResourceTimings()},!1)),document.addEventListener("scroll",e,!1),document.addEventListener("keypress",e,!1),document.addEventListener("click",e,!1)}},{1:10,2:9,3:8,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],7:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=(t(1),t("ee").create()),i=t(2)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&&!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&&n(s);for(var c=XMLHttpRequest.prototype;c&&!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&&n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t){if(t[1]){var e=t[1];"function"==typeof e?this.wrapped=t[1]=a(e,"nr@wrapped",function(){return i(e,"fn-",null,e.name||"anonymous")}):"function"==typeof e.handleEvent&&i.inPlace(e,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:24,2:25,ee:"QJf3ax",gos:"7eSDFh"}],8:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window.history,["pushState"],"-")},{1:25,2:24,ee:"QJf3ax"}],9:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:25,2:24,ee:"QJf3ax"}],10:[function(t,e){function n(t,e,n){t[0]=o(t[0],"fn-",null,n)}var r=(t(2),t("ee").create()),o=t(1)(r);e.exports=r,o.inPlace(window,["setTimeout","setInterval","setImmediate"],"setTimer-"),r.on("setTimer-start",n)},{1:25,2:24,ee:"QJf3ax"}],11:[function(t,e){function n(){f.inPlace(this,p,"fn-")}function r(t,e){f.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}function i(t,e){for(var n in t)e[n]=t[n];return e}var a=t("ee").create(),s=t(1),c=t(2),f=c(a),u=c(s),d=window.XMLHttpRequest,p=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=a,window.XMLHttpRequest=function(t){var e=new d(t);try{a.emit("new-xhr",[],e),u.inPlace(e,["addEventListener","removeEventListener"],"-",o),e.addEventListener("readystatechange",n,!1)}catch(r){try{a.emit("internal-error",[r])}catch(i){}}return e},i(d,XMLHttpRequest),XMLHttpRequest.prototype=d.prototype,f.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),a.on("send-xhr-start",r),a.on("open-xhr-start",r)},{1:7,2:25,ee:"QJf3ax"}],12:[function(t){function e(t){var e=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!e.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var a=t.responseType,f="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,u=n(f);if(u&&(r.rxSize=u),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&&(e.cat=d.split(", ").pop())}}else e.status=0;r.cbTime=this.cbTime,o("xhr",[e,r,this.startTime])}}}function n(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,f=t(1);t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=e,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,e){var r=this.metrics,o=t[0],i=this;if(r&&o){var f=n(o);f&&(r.txSize=f)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{a.emit("internal-error",[n])}catch(r){}}};for(var u=0;c>u;u++)e.addEventListener(s[u],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof XMLHttpRequest&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:13,3:11,4:7,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],13:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],14:[function(t,e){function n(t){return function(){r(t,[(new Date).getTime()].concat(i(arguments)))}}var r=t("handle"),o=t(1),i=t(2);"undefined"==typeof window.newrelic&&(newrelic=window.NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit","noticeError"];o(a,function(t,e){window.NREUM[e]=n("api-"+e)}),e.exports=window.NREUM},{1:23,2:24,handle:"D5DuLP"}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):(o[t]||(o[t]=[]),void o[t].push(e))}var r=t("ee").create(),o={};e.exports=n,n.ee=r,r.q=o},{ee:"QJf3ax"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info,e=f.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){s(d,function(e,n){e in t||(t[e]=n)});var n="https"===u.split(":")[0]||t.sslForHttp;p.proto=n?"https://":"http://",a("mark",["onload",i()]);var r=f.createElement("script");r.src=p.proto+t.agent,e.parentNode.insertBefore(r,e)}}function r(){"complete"===f.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=t(1),c=(t(2),window),f=c.document,u=(""+location).split("?")[0],d={beacon:"http://support.jwplayer.com/customer/portal/articles/bam.nr-data.net",errorBeacon:"http://support.jwplayer.com/customer/portal/articles/bam.nr-data.net",agent:"nr-632.min-5.js"/*tpa=http://support.jwplayer.com/customer/portal/articles/js-agent.newrelic.com/nr-632.min.js*/},p=e.exports={offset:i(),origin:u,features:{}};f.addEventListener?(f.addEventListener("DOMContentLoaded",o,!1),c.addEventListener("load",n,!1)):(f.attachEvent("onreadystatechange",r),c.attachEvent("onload",n)),a("mark",["firstbyte",i()])},{1:23,2:14,handle:"D5DuLP"}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],23:[function(t,e){function n(t,e){var n=[],o="",i=0;for(o in t)r.call(t,o)&&(n[i]=e(o,t[o]),i+=1);return n}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],24:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],25:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@wrapper",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,f;try{i=this,n=o(arguments),s=r&&r(n,i)||{}}catch(d){u([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return f=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,f],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=!0,f(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,f?s+o:o,i,s))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){u([o,e,n,r])}}function f(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){u([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function u(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:24,ee:"QJf3ax"}]},{},["G9z0Bl",4,12,6,5]);</SCRIPT>
+<meta pod-id="" />
+	<link href="portal_jqueryui_only-ae2078f5d9247e97c310caf0c453b7d9.css" tppabs="http://assets0.desk.com/assets/portal_jqueryui_only-ae2078f5d9247e97c310caf0c453b7d9.css" media="screen" rel="stylesheet" type="text/css" />
+		<script src="vendor-c0a3f0c532dd6db2d09875a0ea69a8b0-2.js" tppabs="http://assets3.desk.com/assets/vendor-c0a3f0c532dd6db2d09875a0ea69a8b0.js" type="text/javascript"></SCRIPT>
+		<script src="customer_widget-044efc6df9c5a6cdfe09ae38cde0fa38-1.js" tppabs="http://assets3.desk.com/assets/customer_widget-044efc6df9c5a6cdfe09ae38cde0fa38.js" type="text/javascript"></SCRIPT>
+		<script src="portal-91f2c05bc750c60d8436b97ba49ac1d7-3.js" tppabs="http://assets2.desk.com/assets/portal-91f2c05bc750c60d8436b97ba49ac1d7.js" type="text/javascript"></SCRIPT>
+
+
+		
+		<script src="jsapi-key=ABQIAAAAQO2RPu5r12mVC40HMDIFHRQqrBpdv_jP_dFl8Cw_MxS37sDB3xTXnsXso23z1ROPVCqEVVv6cqz_cA" tppabs="http://www.google.com/jsapi?key=ABQIAAAAQO2RPu5r12mVC40HMDIFHRQqrBpdv_jP_dFl8Cw_MxS37sDB3xTXnsXso23z1ROPVCqEVVv6cqz_cA" type="text/javascript"></SCRIPT>
+	<script src="tracking-fa783f3c0c6abfbb760eb8ead6cb554e-3.js" tppabs="http://assets3.desk.com/assets/tracking-fa783f3c0c6abfbb760eb8ead6cb554e.js" type="text/javascript"></SCRIPT>
+
+<script src="deskanalytics.js" tppabs="http://deskwww.s3.amazonaws.com/new/javascripts/deskanalytics.js" type="text/javascript"></SCRIPT>
+
+
+<script src="production-158454f93db4467614c0b03dd247b5b0-1.js" tppabs="http://assets1.desk.com/assets/tracking/settings/production-158454f93db4467614c0b03dd247b5b0.js" type="text/javascript"></SCRIPT>
+
+	<meta content="authenticity_token" name="csrf-param" />
+<meta content="fA/5c4oukSEfEVQ2omGbaafCKnox9aSOQp3xmy8RrCk=" name="csrf-token" />
+
+		
+
+<title>
+瑞草区盘浦洞JW播放器|
+
+视频:视频业务模式
+
+</title>
+
+<link rel="stylesheet" href="reset.css" tppabs="http://support-static.jwplayer.com.s3-website-us-east-1.amazonaws.com/css/reset.css" type="text/css" media="screen">
+<link rel="stylesheet" href="jwsupport.css" tppabs="http://support-static.jwplayer.com.s3-website-us-east-1.amazonaws.com/css/jwsupport.css" type="text/css" media="screen">
+<script type="text/javascript" src="jquery-1.9.1.js" tppabs="http://support-static.jwplayer.com.s3-website-us-east-1.amazonaws.com/js/jquery-1.9.1.js"></SCRIPT>
+<script type="text/javascript">(function() { jQuery.noConflict(); }())</SCRIPT>
+<script type="text/javascript" src="jquery-ui-1.10.3.custom.min.js" tppabs="http://support-static.jwplayer.com.s3-website-us-east-1.amazonaws.com/js/jquery-ui-1.10.3.custom.min.js"></SCRIPT>
+<script type="text/javascript" src="support.js" tppabs="http://support-static.jwplayer.com.s3-website-us-east-1.amazonaws.com/js/support.js"></SCRIPT>
+<script src="5V3tOP97EeK2SxIxOUCPzg.js" tppabs="http://jwpsrv.com/library/5V3tOP97EeK2SxIxOUCPzg.js"></SCRIPT>
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $('.ui-autocomplete').css({"width": 560});
+
+  var elementArr = ['.codeBlock', 'pre', 'code', 'fvch-codeblock'];
+
+  for(var i = 0; i <= elementArr.length; i++){
+    $(elementArr[i]).each(function(index, value){
+      $(this).addClass("notranslate");
+    });
+  }
+
+});
+</SCRIPT>
+
+
+<link rel='SHORTCUT ICON' type='image/ico' href='https://jwplayer.desk.com/customer/portal/theme_attachments/16139?cb=1389736032397' />
+<link rel='icon' type='image/png' href='https://jwplayer.desk.com/customer/portal/theme_attachments/16139?cb=1389736032397' />
+
+
+
+<meta property="og:title" content="Video: Video Business Models"/>
+<meta property="og:type" content="article"/>
+<meta property="og:site_name" content="JW Player"/>
+<meta property="og:description"
+content="Join Jin and Henry as they present the most effective online video business models. Topics include case studies, an over..."/>
+
+
+
+
+<style type="text/css">
+    iframe[name='google_conversion_frame'] {
+    height: 0 !important;
+    width: 0 !important;
+    line-height: 0 !important;
+    font-size: 0 !important;
+    margin-top: -13px;
+    float: left;
+    }
+  </style>
+
+<script>(function() {
+  var _fbq = window._fbq || (window._fbq = []);
+  if (!_fbq.loaded) {
+    var fbds = document.createElement('script');
+    fbds.async = true;
+    fbds.src = 'fbds.js'/*tpa=http://connect.facebook.net/en_US/fbds.js*/;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(fbds, s);
+    _fbq.loaded = true;
+  }
+  _fbq.push(['addPixelId', '1500628376860149']);
+})();
+window._fbq = window._fbq || [];
+window._fbq.push(['track', 'PixelInitialized', {}]);
+</SCRIPT>
+<noscript><img height="1" width="1" alt="" style="display:none" src="tr-id=1500628376860149&ev=PixelInitialized" tppabs="https://www.facebook.com/tr?id=1500628376860149&ev=PixelInitialized" /></noscript>
+
+
+
+	</head>
+	<body>
+			<div id="flash" class="flash_html"><div class="agent_notifier_msg a-flash flash_notice">
+
+
+</div>
+</div>
+		
+
+<header id="site_header">
+<div class="section_wrapper" id="top">
+   <a href="index.htm" tppabs="http://support.jwplayer.com/" class="logo">播放机支持瑞草区盘浦洞JW</a>
+<nav>
+<ul>
+<li><a href="articles.htm" tppabs="http://support.jwplayer.com/customer/portal/topics/601065-embedding/articles">嵌入</a></li>
+<li><a href="articles-1.htm" tppabs="http://support.jwplayer.com/customer/portal/topics/605644-video-ads/articles">视频广告</a></li>
+<li class="current_page_item"><a href="articles-2.htm" tppabs="http://support.jwplayer.com/customer/portal/topics/605645-jw-platform/articles">瑞草区盘浦洞JW平台</a></li>
+</ul>
+
+
+
+<span class="subnav_header">登录到开机自检问题 </span>
+<ul class="subnav">
+<li><a href="javascript:if(confirm('http://www.jwplayer.com/innovation/  \n\n�ļ�� Teleport Ultra ��, �Ϊ ��һ��·���Ϊ����ĵ�  \n\n�������?'))window.location='http://www.jwplayer.com/innovation/'" tppabs="http://www.jwplayer.com/innovation/">创新</a></li>
+<li>/ </li>
+<li><a href="javascript:if(confirm('http://www.jwplayer.com/products/  \n\n�ļ�� Teleport Ultra ��, �Ϊ ��һ��·���Ϊ����ĵ�  \n\n�������?'))window.location='http://www.jwplayer.com/products/'" tppabs="http://www.jwplayer.com/products/">产品</a></li>
+<li>/ </li>
+<li><a href="javascript:if(confirm('http://www.jwplayer.com/pricing/  \n\n�ļ�� Teleport Ultra ��, �Ϊ ��һ��·���Ϊ����ĵ�  \n\n�������?'))window.location='http://www.jwplayer.com/pricing/'" tppabs="http://www.jwplayer.com/pricing/">定价</a></li>
+<li>/ </li>
+<li><a href="javascript:if(confirm('http://account.jwplayer.com/support  \n\n�ļ�� Teleport Ultra ��, �Ϊ ��һ��·���Ϊ����ĵ�  \n\n�������?'))window.location='http://account.jwplayer.com/support'" tppabs="http://support.jwplayer.com/customer/en/authentication/multipass?return_to=%2Fcustomer%2Fportal%2Farticles%2F1620802-video-video-business-models">登录</a></li>
+</ul>
+
+
+
+</nav>
+<div class="cap_left">&nbsp;</div>
+<div class="cap_right">&nbsp;</div>
+</div> <!-- section_wrapper -->
+</header> <!-- header -->
+
+
+
+<section id="page_wrapper" class="two_column">
+<div class="section_wrapper clearfix">
+<div class="main">
+     <!--begin:portal_body-->
+
+<!--begin:page_article--><script type="text/javascript">
+$(function(){
+  $("#rate_article div:nth-child(1) a").click(function(){
+    $("#rate_article").css("visibility", "hidden");
+    window.setTimeout(showHello, 1000);
+  }).next().text("");
+
+  $("#rate_article div:nth-child(2) a").click(function(){
+    $("#rate_article").css("visibility", "hidden");
+    window.setTimeout(showHello, 1000);
+  }).next().text("");
+});
+
+function showHello(){
+  $("#rate_article").text("Thank you for your support!");
+  $("#rate_article").css("visibility", "visible");
+  $("<a href=\"mailto:feedback@jwplayer.com\" class=\"feedback_link\">Feedback</a>").insertAfter("#rate_article_container");
+}
+
+$(document).ready(function() {
+  $('#rate_article div:nth-child(1) a').text('I found this article helpful');
+  $('#rate_article div:nth-child(2) a').text('I did not find this article helpful');
+});
+</SCRIPT>
+
+<div class="article">
+<h1>视频:视频业务模式 </h1>
+<p class="breadcrumbs">
+
+   <a href="index.htm" tppabs="http://support.jwplayer.com/">主页</a> /
+   <a href="articles-2.htm" tppabs="http://support.jwplayer.com/customer/portal/topics/605645-jw-platform/articles">JW平台</a> /
+视频:视频业务模式
+
+</p>
+
+<p>参加镇和唐英年议员,他们将向您介绍最有效的在线视频业务模式。 主题包括案例研究、瑞草区盘浦洞JW平台概览和一睹我们chromecast一体化。 </p>
+
+<div id="videoContainer" itemprop="video" itemscope="" itemtype="http://schema.org/VideoObject" style="width:640px; box-shadow: 0 0 5px rgba(0,0,0,0.5); margin: 20px auto 60px auto;">
+<meta content="Video Business Models" itemprop="name" />
+<meta content="T37M48S" itemprop="duration" />
+<meta content="http://content.jwplatform.com/thumbs/07goMQVZ-640.jpg" itemprop="thumbnailUrl" />
+<meta content="http://content.jwplatform.com/videos/07goMQVZ-640.mp4" itemprop="contentURL" />
+<meta content="2014-06-15T12:00:00+00:00" itemprop="uploadDate" />
+<meta content="Join Jin and Henry as they present the most effective online video business models. Topics include case studies, an overview of JW Platform and a sneak peek at our Chromecast integration." itemprop="description" />
+<script type="text/javascript" src="07goMQVZ-xHKpkkgw.js" tppabs="http://content.jwplatform.com/players/07goMQVZ-xHKpkkgw.js"></SCRIPT>
+</div>
+
+<div id="videoTranscript">
+<div class="article_toc">
+<h2>视频记录 </h2>
+
+<nav>
+<ul>
+	<li><a href="#Introduction">介绍</a></li>
+	<li><a href="#OnlineVideoBusinessModels">在线视频业务模式</a></li>
+	<li><a href="#SizingtheOpportunity">调整机会</a></li>
+	<li><a href="#CaseStudy:aMulti-ChannelNetwork">案例研究:一个多通道网络</a></li>
+	<li><a href="#JWPlatform&JWPlayer">瑞草区盘浦洞JW平台和瑞草区盘浦洞JW播放器</a></li>
+	<li><a href="#ChromecastDemo">chromecast演示</a></li>
+	<li><a href="#Questions">问题</a></li>
+</ul>
+</nav>
+</div>
+
+<p>记录此演示文稿的可从下面的内容中找到。 单击一个句子可以跳转到该位置的视频。 </p>
+
+<section><h2><a name='Introduction'></a>介绍 </h2>
+<p><span data-start='1.02'>好的,朋友们。 </span><span data-start='2.62'>所以,我想我们要试着开始,这里。 </span><span data-start='5.42'>如果每个人都抢了一个座椅。 </span><span data-start='7.68'>祝贺你挑选合适分会场会议。 </span><span data-start='12.04'>今天唐英年议员和我都会</span><span data-start='13.5'>简单地谈论有关视频业务模式,并可提供</span><span data-start='16.71'>一个技术审查的瑞草区盘浦洞JW如何</span><span data-start='18.35'>播放器和平台可利用高槓杆比率运作的同时。 </span><span data-start='22.15'>我会还给你一点点的背景,我自己。 </span><span data-start='25.34'>我在这里所做的工作在瑞草区盘浦洞JW播放器做的,有很多不同的东西。 </span></p>
+
+<p><span data-start='29.65'>业务发展、公司发展有时</span><span data-start='31.87'>我清理了厨房。 </span><span data-start='33.91'>我参加的2011十二月。 </span><span data-start='35.99'>在加盟瑞草区盘浦洞JW播放器,我是一个投资银行家。 </span><span data-start='39.11'>其实我今天我在我的训练室,在那里,所以它</span><span data-start='42.72'>是一个比特的是一种令人沮丧的今天上午,回来了。 </span><span data-start='47.62'>和我曾经在私人股本的几年内</span><span data-start='50.6'>我的名字是唐英年议员,我一直以来与选手瑞草区盘浦洞JW2009。 </span><span data-start='55.34'>其实,我从一开始就作为一名工程师在</span><span data-start='57.85'>播放器,我一直在等的工程师0年。 </span></p>
+
+<p><span data-start='59.89'>我工作了四年,工程师。 </span><span data-start='62'>我想这是我第一次在华尔街,没错,但基本到位。 </span><span data-start='66.03'>不这样做,不回来。 </span><span data-start='67.02'>没错,在这我已完成,但是,</span><span data-start='69.27'>没错,基本上,我是公司的瑞草区盘浦洞JW平台产品经理,</span><span data-start='73.4'>因此,我们将通过一些有关我们的</span><span data-start='74.62'>平台,是的,我想我们将会开始。 </span></p></section>
+
+<section><h2><a name='OnlineVideoBusinessModels'></a>在线视频业务模式 </h2>
+<p><span data-start='79.88'>所以,我只想提供一个快速高一级的审查的一些</span><span data-start='83.29'>视频内容业务模式,我们通常会</span><span data-start='85.57'>看到一边JW播放器和平台。 </span><span data-start='88.79'>我们将真的会更多注意力集中在广告方面的东西,因为</span><span data-start='92.44'>你已经看到更紧密集成平台中的播放器,一边我们做什么。 </span><span data-start='96.6'>但是您知道,我想确保我们涵盖了所有我们的基础。 </span><span data-start='100.26'>因为它具体涉及到视频点播您知道,您</span><span data-start='103.81'>倾向于以见订阅基本型号您的想法Netflix、亚马逊、Hulu。 </span><span data-start='108.23'>你可能是非常熟悉的,因为这</span><span data-start='110.42'>家伙根据您的典型消费行为。 </span></p>
+
+<p><span data-start='113.52'>一个的东西,我们可以看到在这一方面,</span><span data-start='115.84'>我也会到这一点更多,一些指标。 </span><span data-start='119.97'>是有一个高度集中的前三发布者。 </span><span data-start='123.33'>这是一个寡头垄断的空间,因此它的非常、非常困难</span><span data-start='126.79'>的今天,新的行动者,是成功的另一个是</span><span data-start='131.23'>常量许可注意事项还有一吨的内容,</span><span data-start='134.81'>但是有一个很小的池非常高质量的内容。 </span><span data-start='137.77'>获得访问权限,显然会是一个非常难。 </span><span data-start='140.81'>因此,当人们相信通过我们如何实现盈利,您知道,在访问</span><span data-start='145.67'>到正确的产品,会是非常,非常重要的是,在长时间运行。 </span></p>
+
+<p><span data-start='150.25'>具体地说,它涉及到paywalls。 </span><span data-start='152.87'>您知道,人们看到了不同类型的paywalls,您有硬盘paywalls。 </span><span data-start='156.32'>但是,您只需登录有关网站您认为我猜中了纽约时报</span><span data-start='161.98'>有一个,有一个记数在您登录paywall十篇文章读后每个月。 </span><span data-start='166.9'>但是,真正的想法是你网站的内容,</span><span data-start='170.52'>也可以实时或是十分相关的某些有限的时间。 </span><span data-start='174.78'>获得访问权限,内容是说,是</span><span data-start='176.78'>您显然支付的</span><span data-start='180.67'>上下文内的视频点播和paywalls,</span><span data-start='183.18'>瑞草区盘浦洞JW播放器是否真正有助于作为一个,播放机制。 </span></p>
+
+<p><span data-start='186.19'>软件层,管理这一进程中,</span><span data-start='188.56'>交易等等通常是内置在播放器的四周。 </span><span data-start='191.99'>因此,这不是一件,您必须</span><span data-start='193.86'>经过专门的播放器进行调整的目的。 </span><span data-start='197.7'>很显然,我们发挥得很好,空间中。 </span><span data-start='199.64'>唐英年将进入细节</span><span data-start='201.49'>,如何再次发生但却广告从我们的</span><span data-start='205.18'>角度来看,有很大一块,我们已经找到了一条很大的成功。 </span><span data-start='209.69'>我们已经修改了播放器其实</span><span data-start='212.75'>在最近推出了瑞草区盘浦洞JW6,2013年底。 </span></p>
+
+<p><span data-start='215.96'>在高响应性,目前发生的情况、</span><span data-start='218.67'>条款的,在线广告技术,世界</span><span data-start='222.34'>的目标我认为是它涉及到在线视频广告是</span><span data-start='227.24'>尝试创建很大的电视体验。 </span><span data-start='230.09'>同乡、排序的时间进行调整,以有一定</span><span data-start='233.23'>反应,它涉及到的内容和互动广告在一起。 </span><span data-start='237.91'>该播放器,很坦率地说,</span><span data-start='240.88'>在广告IAB标准标记,企图</span><span data-start='245.06'>建立一个、观看视频在线非常</span><span data-start='247.95'>类似于观看视频在沙发里。 </span></p>
+
+<p><span data-start='251.42'>和其他大要素,同样,我们,在</span><span data-start='254.07'>一个,在一个点,是扩大支持移动。 </span><span data-start='257.14'>唐英年议员会详细信息。 </span><span data-start='258.9'>一个有关的美好的东西,我们的播放器</span><span data-start='261.09'>,可以播放,在每一个设备,您可以在每一个设备实现盈利。 </span><span data-start='264.79'>不可以,声音太salesy。 </span></p></section>
+
+<section><h2><a name='SizingtheOpportunity'></a>调整机会 </h2>
+<p><span data-start='269.21'>在功效的在线广告。 </span><span data-start='272.01'>您知道,89%的被访者我们</span><span data-start='273.63'>出版管理人员,从最近的市场营销人员调查。 </span><span data-start='277.67'>有说,他们希望数码业务的收入将会增加。 </span><span data-start='281.37'>我真的不知道,其他人都是11%,但由于它</span><span data-start='285.67'>与驱动程序的压倒性的</span><span data-start='289.18'>增长,就会由广告。 </span><span data-start='291.51'>付费订阅的,是有意义的。 </span><span data-start='294.69'>我认为您将查找。 </span><span data-start='296.46'>并且,我认为,一个企业的监护人一样是一个完美的例子。 </span></p>
+
+<p><span data-start='299.76'>他们的发布者使用播放器,在其网站、播放视频。 </span><span data-start='304.28'>他们经历了喜忧参半的结果和他们实际上非常坚决</span><span data-start='307.39'>不维持一个paywall结构,因为它涉及到货币化。 </span><span data-start='312.33'>广告一直是他们的处事方式,以及对其进行排序,</span><span data-start='315.53'>将最上面的一行同时保持这一关系,其浏览器基座。 </span><span data-start='319.81'>它可以让您访问到内容,而不进行排序的</span><span data-start='323.36'>能力,减轻对访问该内容在一个快速和有效的方法。 </span><span data-start='325.98'>有这么多的内容,在今天的世界上。 </span><span data-start='328.1'>您可以转到“美国有线电视新闻网(CNN)。 </span><span data-start='329.7'>您可以转至“征得监护人的同意。 </span></p>
+
+<p><span data-start='330.43'>您可以转到大西洋和访问内容是相似的。 </span><span data-start='333.95'>把一个墙面之间,之间的障碍一个您和您的客户群,它的</span><span data-start='337.61'>一些东西,很多人都有,非常非常不同的结果。 </span><span data-start='342.22'>又一次,这一点,Netflix,亚马逊、Hulu他们</span><span data-start='346.05'>占了近65%的总基于订阅通信。 </span><span data-start='350.67'>这是一个世界,在那里从现实的角度来看,最重要、最新的角色</span><span data-start='354.76'>会有一个非常困难的时候进入</span><span data-start='358.66'>,你......,你的无理取闹到右边的图表。 </span><span data-start='364.13'>视频欣赏风景,是在一段时间内大幅增加。 </span><span data-start='367.79'>视频广告支出不断增加。 </span></p>
+
+<p><span data-start='371.1'>这一想法,这是真的强调的</span><span data-start='373.2'>事实是,这不是一个市场要走。 </span><span data-start='375.98'>我记得当我第一次加入瑞草区盘浦洞JW播放器就有了。 </span><span data-start='379.62'>有一个问题,成功实现了人民会</span><span data-start='383.56'>待在查找,一个一个的在线移动媒体广告。 </span><span data-start='388.17'>我认为,人们已经找到特别是在过去0个月,在</span><span data-start='392.22'>它是一个媒介的作用,它是一个绝对有必要您知道该播放器,</span><span data-start='396.3'>我们开发了这种工程HL5和</span><span data-start='399.04'>很好与Google,东西</span><span data-start='402.43'>,您知道,我们强调的是 </span></p>
+
+<p><span data-start='405.05'>您可以在相同的体验。 </span><span data-start='407.44'>OTT、台式机和移动</span><span data-start='410.22'>,因此,一定要记住</span><span data-start='411.9'>,您通过您周围decisioning业务模型。 </span></p></section>
+
+<section><h2><a name='CaseStudy:aMulti-ChannelNetwork'></a>案例研究:一个多通道网络 </h2>
+<p><span data-start='416.16'>噢,这是排序的一块,我</span><span data-start='418.82'>认为,将排序的盖得很好,周围的故事。 </span><span data-start='424.23'>在线广告,以及对其进行排序</span><span data-start='426.19'>,如何发挥到一个内容驱动的业务模型。 </span><span data-start='428.91'>我不会再透露名称的这种多通道网络,</span><span data-start='431.04'>但大多数的你们可能出图。 </span><span data-start='433.48'>但这些家伙向我们,一年前,试图</span><span data-start='437.37'>利用我们的平台和播放器的一种方法的,一个驾驶</span><span data-start='442.96'>增量投资回报率与他们的视频内容到排序的尝试</span><span data-start='449.39'>从分离需要一个依靠,在其现有的基础架构。 </span></p>
+
+<p><span data-start='455.41'>我认为,你们认为的演变在线视频,我觉得</span><span data-start='460.04'>在这里也有一些,在线视频1我</span><span data-start='463.4'>真的认为的,因为YouTube的革命。 </span><span data-start='466.51'>您知道,YouTube已做了非常了不起的工作</span><span data-start='468.61'>是作为一个分销平台,作为一个搜索</span><span data-start='471.46'>平台,作为一个技术平台,而且,在一</span><span data-start='474.46'>天结束,YouTube将永远不能消失。 </span><span data-start='477.42'>他们是,他们开发了和排序的实现一个网络效应。 </span><span data-start='483.23'>这使得他们的绝对数字中的一个角色,空间。 </span><span data-start='487.42'>当他们进入市场的好处 </span></p>
+
+<p><span data-start='489.36'>是他们,他们看到了技术、技术难题。 </span><span data-start='492.35'>他们能够将内容从A点到B点,显然是他们,他们也</span><span data-start='497.51'>都是第二个最强大或我猜</span><span data-start='499.64'>大部分使用的搜索引擎,在互联网上。 </span><span data-start='502.66'>和人,当您想观看视频,你想上传到YouTube。 </span><span data-start='507.32'>关注的,有很多的出版商,因为他们</span><span data-start='509.75'>制定了和变得更为复杂,他们构建目标受众</span><span data-start='513.29'>,还有一个元素的控制,则割让</span><span data-start='516.82'>给YouTube在使用和利用他们的平台。 </span><span data-start='519.31'>YouTube网站上,作为中介,在 </span></p>
+
+<p><span data-start='521.67'>出版商、广告商,并查看器。 </span><span data-start='524.61'>当您成为一个较大发布器,您认识到,嘿,</span><span data-start='529.98'>我不需要中介,或许我可以直接转到广告。 </span><span data-start='533.79'>也许我可以直接与我国观众。 </span><span data-start='536.79'>这已成为了一种做,我真想要一个黑</span><span data-start='539.65'>框,在获得一个检查每个月呢? </span><span data-start='542.8'>因此,我们认为这特别是多通道网络,虽然他们</span><span data-start='547.07'>真的很享受的是,YouTube是一个平台。 </span><span data-start='551.07'>这场斗争,嘿,我们为什么要获得0.65</span><span data-start='554.06'>的每一分钱,而我们也许可以获得0.85。 </span></p>
+
+<p><span data-start='558.31'>因此,这是一个很真实的问题,很多人都是迎面而来。 </span><span data-start='562.13'>有很多的,其实,</span><span data-start='563.6'>我们最近有一个竞争吞噬我们。 </span><span data-start='566.49'>他可以将视频他刚才吃的这一可怕,可怕</span><span data-start='569.89'>事情,他,他,他基本上是说,嘿,我一</span><span data-start='573.84'>直在接触点兑换,梦美术馆,他们希望我的</span><span data-start='577.78'>内容盈利在这些疯狂CPM(每千人成本),我可能永远都不会做梦。 </span><span data-start='581.32'>当我在YouTube上,我该如何做呢? </span><span data-start='585.07'>因此,十分有趣。 </span><span data-start='586.34'>2迭代中的在线视频架构, </span></p>
+
+<p><span data-start='590.13'>我们所看到的都是技术非常的厂商开始进入市场。 </span><span data-start='594.87'>男生喜欢玮律师(,孔巴·亚拉总统的altura。 </span><span data-start='598.3'>它们提供了完整堆栈解决方案,有效地</span><span data-start='600.76'>镜像YouTube那样的这些球员。 </span><span data-start='603.4'>但这些都是支付解决方案。 </span><span data-start='605.25'>在翻转过来的,就是您不再有一些使用</span><span data-start='608.95'>和利用YouTube作为您的唯一</span><span data-start='610.78'>之间的中介广告商、观众,等等。</span><span data-start='614.23'>您控制您的概念。 </span><span data-start='617.08'>这种方法的缺点,当然,一个原因是,因为 </span></p>
+
+<p><span data-start='619.85'>没有任何通讯或标准化这些供应商之间。 </span><span data-start='624.87'>有数据或文件。 </span><span data-start='626.68'>没有沟通,我如何,</span><span data-start='629.62'>我怎样才能与其他站点进行通信,人们正在</span><span data-start='632.72'>观看的节目,以及如何开发一个复杂性,确保</span><span data-start='636.69'>我的内容的方法是右眼球? </span><span data-start='639.53'>和其他的课程,他们的产品已十分、十分昂贵的。 </span><span data-start='645.81'>因此,今天,唐英年将</span><span data-start='648.96'>会进行排序的倡言的技术解决这个问题,</span><span data-start='650.92'>但是,翻转过来的类似的技术,将对, </span></p>
+
+<p><span data-start='654.56'>的,我们所做的上侧的瑞草区盘浦洞JW播放器。 </span><span data-start='656.53'>是,这三个CS。 </span><span data-start='658.37'>您可以获得绝对控制,类似于解决方案</span><span data-start='661.04'>的完整的栈Pro,提供商提供给您。 </span><span data-start='665.1'>您是,您是一个发布者,现在有了</span><span data-start='669.08'>技术作为一个技术平台,而它的货币化平台。 </span><span data-start='673.52'>这是一个查找平台。 </span><span data-start='675.5'>它是,它是一个播放机制有效地为您的家伙。 </span><span data-start='679.18'>在“自定义方面,它的所有品牌。 </span><span data-start='681.77'>权的情况,因为,您是否是监护人, </span></p>
+
+<p><span data-start='684.57'>您的弹出糖,无论您是,实际的网络。 </span><span data-start='687.96'>现在,您可以参加我们播放器,我们的技术和</span><span data-start='691.34'>白色标记,正是您的,您的需求和规格。 </span><span data-start='695.02'>和成本方面,我不知道有</span><span data-start='697.33'>多少人熟悉成本核算模型</span><span data-start='699.24'>,我们认为您一定能找到,一个,他们具有高度的灵敏性</span><span data-start='702.54'>,现实的市场一个日益商品化的技术空间,</span><span data-start='707.26'>但有两个你知道,他们,才是最好的出类拔萃的</span><span data-start='710.03'>技术,您可以再次得到市场响应式定价,</span><span data-start='714.72'>,是好事的瑞草区盘浦洞JW模块化的播放器,虽然您可以 </span></p>
+
+<p><span data-start='718.61'>有两个播放器和平台一起,</span><span data-start='721.98'>您可以去找到解决方案。 </span><span data-start='724.88'>瑞草区盘浦洞JW播放器、CDN编码,并和排序的</span><span data-start='729.65'>这些元素在一起,根据所有需求。 </span><span data-start='733.43'>你可以明显地尽一切努力与我们合作,是因为我们有一个</span><span data-start='736.79'>解决方案,但在这一灵活性使人</span><span data-start='740.45'>有非常、非常复杂视频需求。 </span><span data-start='742.84'>构建他们自己的解决方案,这是</span><span data-start='745.3'>一个很大的规模的扩大和更多的企业客户真的很感激。 </span><span data-start='750.41'>和漂亮的小区其实,当 </span></p>
+
+<p><span data-start='753.01'>他们向我们,他们能够</span><span data-start='755.45'>保持其YouTube存在,因为YouTube最终是一个</span><span data-start='758.54'>驱动程序在一个方法,使他们能够保持这种受众。 </span><span data-start='761.63'>和找到相关的内容、使用和利用YouTube,并允许</span><span data-start='766.66'>他们种的蛋糕,吃它。 </span><span data-start='770.06'>条款中的下一个阶段的</span><span data-start='771.12'>演变,而内容是越来越多地王,而我</span><span data-start='774.21'>认为,有了技术,使您在不限制</span><span data-start='777.72'>您、可再生能源、再生能源、排序的强调这一现实。 </span><span data-start='781.4'>下一步是要在环境。 </span></p>
+
+<p><span data-start='783.32'>对吗? </span><span data-start='783.59'>因此,我的内容。 </span><span data-start='785.65'>但是,这样做50其它网站。 </span><span data-start='787.65'>思考、名人新闻。 </span><span data-start='789.54'>我可以发出卡嗒声,这是一个小尴尬。 </span><span data-start='791.92'>我可以发出卡嗒声关闭站点可能是30,做名人新闻。 </span><span data-start='796.22'>您如何区分和发现的内容与您最相关? </span><span data-start='799.75'>这是很明显,我们在发挥了作用。 </span><span data-start='803.05'>不会太多。 </span><span data-start='804.4'>有一个数据,我鼓励大家去检查。 </span></p>
+
+<p><span data-start='808.26'>但它的真的是关心的是,瑞草区盘浦洞JW播放器是一个,</span><span data-start='813.06'>是一个技术上,在今天0网站。 </span><span data-start='817.35'>吨的数据,是通过我们的服务器进行流化每天。 </span><span data-start='821.27'>和我们可以深入了解这些数据。 </span><span data-start='822.89'>和真的进行排序,说话的前景</span><span data-start='825.78'>和潜力的一个打开视频生态系统,玩家在各个</span><span data-start='829.64'>站点,都能相互通信,并</span><span data-start='832.21'>最终推动decisioning围绕内容、</span><span data-start='835.16'>广告,和观众。 </span><span data-start='837.64'>我虽然这样说,我会处理, </span></p>
+
+<p><span data-start='839.11'>亨利,谈一谈第二件事。 </span><span data-start='841.81'>冷却,由于吉姆,现在,你们 </span></p></section>
+
+<section><h2><a name='JWPlatform&JWPlayer'></a>瑞草区盘浦洞JW平台和瑞草区盘浦洞JW播放器 </h2>
+<p><span data-start='844.14'>已向您介绍一些商业模式。 </span><span data-start='846.7'>我只想获得一个的举手表决。 </span><span data-start='848.3'>在这里有谁是更感兴趣的是,订购</span><span data-start='851.59'>视频点播、视频点播、应付帐款类型模型。 </span><span data-start='854.96'>如果我只是一个显示的手,只是有点了解。 </span><span data-start='857.48'>冷却。 </span><span data-start='858.5'>然后,在这里有谁更有兴趣</span><span data-start='861.94'>的是一样的协同方面,视频业务呢? </span><span data-start='865.85'>更多内容,转向。 </span><span data-start='867.01'>好的,那么现在,就像MCNS、广告支持 </span></p>
+
+<p><span data-start='871.27'>万维网站点,在这里有谁一样有点更多在这方面有兴趣吗? </span><span data-start='875.5'>因此,位的一个配合,在协同内容。 </span><span data-start='878.25'>“OK”(确定)。 </span><span data-start='878.76'>因此,我要谈一谈。 </span><span data-start='883.41'>噢,你不这样做。 </span><span data-start='884.97'>好了好了,业务模型是什么,你想做什么? </span><span data-start='887.69'>我到这里来决定。 </span><span data-start='890.03'>您要决定的吗? </span><span data-start='890.8'>好,很好。 </span><span data-start='892'>我相信很多的人在同样的方式。 </span></p>
+
+<p><span data-start='894.01'>所以我相信很多的人在同样的方式。 </span><span data-start='895.64'>这种想法是,我们会尽力给您</span><span data-start='898.12'>的资料,作出这种决定,现在我们将练习</span><span data-start='901.84'>为您介绍一些的技术的瑞草区盘浦洞JW播放器</span><span data-start='905.04'>有助于有助于支持这些业务模式,您感兴趣的内容。 </span><span data-start='909.69'>因此,下一张幻灯片。 </span><span data-start='912.28'>我们如何提供帮助? </span><span data-start='913.18'>因此,对那些人来说,这样举手,他们</span><span data-start='915.32'>一样有兴趣svods,您知道,Netflix、Hulu、亚马逊、总理。 </span><span data-start='920.24'>然后那些人来说,这样有兴趣在VOD </span></p>
+
+<p><span data-start='922.97'>这也是亚马逊河和其他一些如iTunes。 </span><span data-start='925.97'>和他们paywalls就像报纸一样想要块内容。 </span><span data-start='929.51'>所以,基本上是为你们,我们有很多的强大JW平台功能。 </span><span data-start='934.31'>因此,瑞草区盘浦洞JW平台,是一个全功能的平台,我们</span><span data-start='937.77'>有,使您可以管理您的视频、主机您的</span><span data-start='941.31'>视频、流视频和我们还涉及到,我们有</span><span data-start='944.39'>一个很大的好的功能,集成了瑞草区盘浦洞JW播放器。 </span><span data-start='947.17'>因此,这确实有助于您充分利用所有的</span><span data-start='949'>权力和工具,瑞草区盘浦洞JW播放器。 </span><span data-start='952.35'>因此,其中一个的东西,我们在 </span></p>
+
+<p><span data-start='954.2'>瑞草区盘浦洞JW平台的刀片式服务器安全功能,因此,如果</span><span data-start='956.88'>您是一个或一个svod paywall,您想要确保</span><span data-start='959.45'>者,必须交钱以访问您的内容。 </span><span data-start='963.69'>所以,我们有一些功能,使您</span><span data-start='965.33'>能够,例如,支持令牌URL签名。 </span><span data-start='968.21'>所以,基本上可以确保人们可以只查看视频</span><span data-start='972.44'>如果他们有,尤其是URL和之后,您可以设置一个时间</span><span data-start='975.8'>限制,因此在可能就像是一个小时、一天、一个月或一</span><span data-start='978.93'>年,一年后,租赁后,视频不能播放了。 </span><span data-start='982.75'>因此,这一点我们是赞成的。 </span></p>
+
+<p><span data-start='984.88'>我们也有其他事情,有助于,人不偷您的视频。 </span><span data-start='989.37'>因此,我再强调一次,我们有HLS损益表。 </span><span data-start='991.18'>您可能会听到最后一次讨论会,主题发言。 </span><span data-start='994.25'>我们有HLS,rtmp。 </span><span data-start='996.14'>因此,应确保,视频</span><span data-start='997.61'>其实是没有生活的人的计算机。 </span><span data-start='999.6'>因为如你所知,渐进式下载,</span><span data-start='1001.97'>他们实际上下载文件到您的高速缓存。 </span><span data-start='1004'>他知道你和我,你们中的许多人可能会去</span><span data-start='1005.56'>您的高速缓存,我喜欢这段视频中,我要就它了,是吗? </span></p>
+
+<p><span data-start='1008.27'>因此,流媒体,这并不像,它的并不容易</span><span data-start='1011.19'>,因为我们打破了一切成小块。 </span><span data-start='1013.68'>同时,允许您生活愉快功能(如自适应比特率切换。 </span><span data-start='1017.9'>因此,在这里有谁知道关于自适应比特率切换? </span><span data-start='1022.11'>很好。 </span><span data-start='1022.52'>对于那些没有举手,以便使</span><span data-start='1024.57'>我们能够修改视频的分辨率取决于您的带宽。 </span><span data-start='1028.61'>因此,如果一个用户,</span><span data-start='1029.63'>每个人都知道YouTube吗? </span><span data-start='1030.63'>您已获得了320p、720p等。 </span></p>
+
+<p><span data-start='1033.07'>当它的真的很差分辨率的视频,你想要增加。 </span><span data-start='1036.17'>是的,我们为你做与自适应比特率切换。 </span><span data-start='1038.66'>我们会自动检测到它,我们的质量。 </span><span data-start='1041.98'>如果他们的带宽是正常的,如果是坏的,如果他们</span><span data-start='1043.79'>仍然在56K调制解调器或阿拉伯劳工组织、然后我们降级。 </span><span data-start='1047.56'>希望你们在阿拉伯劳工组织仍。 </span><span data-start='1049.59'>不过。 </span><span data-start='1050.19'>因此,这些都是我们要帮助保护F、安全为您的视频。 </span><span data-start='1054.22'>同时,它的所有的HTTPS,因此很明显,如果SSL,我们防止这一点。 </span><span data-start='1059.1'>并为我们播放器,我们也支持加密。 </span></p>
+
+<p><span data-start='1062.16'>因此,这一点,你可以这样做,</span><span data-start='1064.58'>在实际数据流进行加密,解密,并在另一侧。 </span><span data-start='1068.15'>因此,下一步我们强大可靠的API可以帮助支持所有的这些事情,你</span><span data-start='1072.21'>想要阻止的用户如果您是做一个svod paywall或一个或一个VoD。 </span><span data-start='1076.89'>所以,基本上,这意味着,您可以</span><span data-start='1079.59'>自定义任何触发器,任何事件在瑞草区盘浦洞JW播放器。 </span><span data-start='1083.38'>因此,举例来说,也许你喜欢,你只想显示30秒的视频。 </span><span data-start='1087.2'>好了,你可以使用我们API和说,30秒后,弹出</span><span data-start='1090.43'>该重叠或弹出这件事和停止录像。 </span><span data-start='1093.29'>您可以随时暂停、停止、前进。 </span></p>
+
+<p><span data-start='1095.59'>因此,我们JavaScript API可以让你做任何你想要的播放器。 </span><span data-start='1099.52'>和真正利用,所有的功能。 </span><span data-start='1102.19'>因此,您可以阻止人并确保他们购买您的钱的视频。 </span><span data-start='1106.61'>我们也有一体化。 </span><span data-start='1107.88'>所以,现在,你使人们看着您的视频,</span><span data-start='1110.6'>我如何、如何找出如何以最佳方式实现盈利? </span><span data-start='1113.4'>如何最优化? </span><span data-start='1114.99'>这样,我们的整合与Google analytics,这样您就可以看到</span><span data-start='1118.85'>用户如何实际播放您的视频,那些完成,谁是你完成。 </span><span data-start='1123.73'>有多少人能够完成您的视频。 </span></p>
+
+<p><span data-start='1125.72'>我们还提供分析我们的平台上,</span><span data-start='1128.27'>我们瑞草区盘浦洞JW播放器,因此您可以看到一些</span><span data-start='1130.16'>更为深入,不仅视频总体的</span><span data-start='1132.22'>层次上,但您可以看到的东西在页面级别。 </span><span data-start='1134.69'>因此,您可以看到哦,在该页上,此域上有多少,有多少意见的</span><span data-start='1138.15'>是我,有多少唯一观众,有</span><span data-start='1140.1'>多少,完成了多少,又有多少人嵌入式? </span><span data-start='1142.95'>因此,我们可以向您提供所有的信息有助于做</span><span data-start='1145.32'>出决策在您的身边,确定。 </span><span data-start='1148.98'>您有一个问题。 </span></p>
+
+<p><span data-start='1149.59'>因此,我们要有一个Q&amp;A。 </span><span data-start='1150.94'>我只会通过一切。 </span><span data-start='1152.29'>然后,写下您的问题,让你不</span><span data-start='1154.86'>思考,你可以,然后让它之后。 </span><span data-start='1157.51'>感谢您。 </span><span data-start='1158.59'>因此,移动在为协同内容试点计划。 </span><span data-start='1161.96'>很多人实际上提出了他们的手为协同内容试点计划。 </span><span data-start='1163.74'>我只想上场比赛,通过一些功能</span><span data-start='1165.6'>,我们,有助于促进协同业务模式。 </span><span data-start='1169.03'>因此,全拥塞,很明显,您有一吨的视频。 </span></p>
+
+<p><span data-start='1172.08'>您有一吨的东西的。 </span><span data-start='1174.59'>我们,如果您想要获取的平台,我们支持全面解决交通挤塞问题。 </span><span data-start='1178.65'>您有RSS订阅源。 </span><span data-start='1180.03'>我们CSV文件。 </span><span data-start='1181.57'>或者,如果您有,或者如果您想要直接FTP,我们支持所有这一切。 </span><span data-start='1184.39'>因此,您可以获得所有您的视频内容到我们的平台。 </span><span data-start='1187.84'>我们可以和您的数据流,或者,很明显地,</span><span data-start='1190.2'>您可以选择主机和数据流,您自己。 </span><span data-start='1192.58'>动态播放列表。 </span><span data-start='1193.52'>所以,这是一个很不错的功能。 </span></p>
+
+<p><span data-start='1195.02'>因此,有很多人都很熟悉,</span><span data-start='1196.8'>只是手动播放列表、播放列表在YouTube上一样。 </span><span data-start='1198.71'>你看一个视频,然后有其他视频</span><span data-start='1201.29'>播放这种后的另一个(如音乐视频。 </span><span data-start='1204.24'>我已经花了长时间播放音乐视频只通过播放列表。 </span><span data-start='1207.58'>那么,如果您有新的视频,您想要添加到播放列表? </span><span data-start='1212.72'>我要返回现在,然后手动添加</span><span data-start='1215.24'>每一个视频,在我,所有这些播放列表我创建了吗? </span><span data-start='1217.89'>这是一个大件麻烦事儿。 </span><span data-start='1219.33'>因此,它浪费了大量的时间。 </span></p>
+
+<p><span data-start='1220.64'>是的,我们有动态播放列表,您可以定义参数实际</span><span data-start='1224.51'>抓取视频,从你的牌库泳池和动态地将它们置于您的播放列表。 </span><span data-start='1229.11'>例如,如果我有,例如,一个播放列表,我</span><span data-start='1231.94'>想要把猫视频的内容,或搞笑猫视频。 </span><span data-start='1234.79'>我可以标注所有的“我的视频”的标签。 </span><span data-start='1237.12'>他说这些都是搞笑视频。 </span><span data-start='1238.82'>这些都是猫视频。 </span><span data-start='1239.72'>这些都是猫和有趣视频。 </span><span data-start='1241.86'>所以,现在我可以随时添加更多CAT视频。 </span><span data-start='1245.03'>视频类或有趣。 </span></p>
+
+<p><span data-start='1246.77'>它会自动进入这些播放列表,我创建。 </span><span data-start='1249.36'>因此,它的动态</span><span data-start='1251.82'>,RSS订阅源。 </span><span data-start='1252.87'>所以,很明显地,如果您是协同,您想要将</span><span data-start='1254.7'>您的内容,许多站点,因此</span><span data-start='1257.03'>我们支持RSS订阅源,您可以生成</span><span data-start='1259.64'>所有您的视频和播放列表。 </span><span data-start='1261.69'>因此,您无须再为其实,你也知道,监视器,手动将该内容。 </span><span data-start='1266'>它的全部为您完成通过RSS订阅源,它的动态。 </span><span data-start='1268.91'>因此,当您更新您的播放列表,这些RSS源将获得 </span></p>
+
+<p><span data-start='1271.88'>已更新,并且您的所有协同内容将得到更新。 </span><span data-start='1276.01'>因此,我们支持IFRAME播放器,因此,这是一个大问题。 </span><span data-start='1279.51'>定期与嵌入,您可以充分利用我们在JavaScript JavaScript API,但</span><span data-start='1283.49'>遗憾的是很多的网站,不允许JavaScript。 </span><span data-start='1286.32'>因此,单词,一些WordPress插件、Facebook、您知道,当您的家伙,tumblr。 </span><span data-start='1290.42'>有很多网站,限制使用的JavaScript,</span><span data-start='1293'>那么如何获得您的播放机的站点? </span><span data-start='1294.77'>那么,对于协同人,我们可以让iframe播放器。 </span><span data-start='1297.75'>和那些在任何站点,即使</span><span data-start='1299.84'>它不允许JavaScript,您可以播放。 </span></p>
+
+<p><span data-start='1301.7'>最后,我们的一个大特点是播放器模板。 </span><span data-start='1305.24'>因此,你们都知道,瑞草区盘浦洞JW,在这里有谁其实使用的是瑞草区盘浦洞JW播放器,现在呢? </span><span data-start='1309.51'>因此,太棒了。 </span><span data-start='1310.18'>然后你在正确的地方。 </span><span data-start='1311.79'>这样,这些,不但是,希望你</span><span data-start='1314.22'>很快就会,但如你所知,播放器模板。 </span><span data-start='1316.52'>这是我们提供的功能的平台。 </span><span data-start='1318.21'>这是、编辑一次,更改无处不在。 </span><span data-start='1321.46'>所以,让我们再来说,您有类似</span><span data-start='1323.61'>成千上万的视频,您已经创建了这一艰巨模板。 </span></p>
+
+<p><span data-start='1326.95'>它的外形非常适合您想要的方式。 </span><span data-start='1328.82'>但是,一年一年,您重塑品牌,改变您的徽标。 </span><span data-start='1333.04'>和您需要。 </span><span data-start='1334.09'>开关在上方的徽标。 </span><span data-start='1335.04'>好了,您是要经过所有千名嵌入</span><span data-start='1337.55'>,通过在每个单一和改变它? </span><span data-start='1339.63'>不,我们提供了一个所谓播放器模板,可在其中更改徽标,</span><span data-start='1343.92'>然后所有的模板在您的所有嵌入代码,使用该播放器。 </span><span data-start='1348.37'>自动获取最新的这个标志,所以它的非常快速和容易的。 </span><span data-start='1351.34'>这也与任何可配置自定义设置 </span></p>
+
+<p><span data-start='1354.07'>其中,在播放器几乎一切都是可定制的。 </span><span data-start='1356.42'>您可以执行的皮肤,您使皮肤改变。 </span><span data-start='1358.82'>实际上,您可以执行,任何的自定义设置的小品的,播放器</span><span data-start='1363.29'>在一个位置,它影响到每一个播放器模板,使用该模板。 </span><span data-start='1369'>下一步,支持广告的商业模式。 </span><span data-start='1371.11'>因此,对于你们,我们有一套完整的瑞草区盘浦洞JW功能广告播放器。 </span><span data-start='1376.37'>因此,在这里有谁其实使用的是瑞草区盘浦洞JW广告播放器,特别是? </span><span data-start='1380.15'>WOW,几乎是同一人。 </span><span data-start='1382.22'>您知道,举手的瑞草区盘浦洞JW播放器。 </span><span data-start='1383.99'>因此,您都知道,和瑞草区盘浦洞JW广告是一种特殊而且 </span></p>
+
+<p><span data-start='1388.73'>我们的播放器,使您可以将广告中的标签。 </span><span data-start='1392.04'>如此巨大,我们支持广泛2、丰富3、V,V地图。 </span><span data-start='1396.37'>因此,我们也有合作伙伴关系,几乎每一个广告网络。 </span><span data-start='1400.28'>在那里,基本上,您可以将您JW广告播放器和</span><span data-start='1405.02'>使用我们的平台在同一时间,然后管理很多的</span><span data-start='1408.66'>那些广告功能通过我们的平台,这样您就不必转</span><span data-start='1411.69'>到您嵌入代码或获取您的工程师们将能够在广告标签。 </span><span data-start='1415.09'>您也可以直接去做就可以直接通过我们的平台,通过一个简单用户界面。 </span><span data-start='1418.94'>你只会得到你的丰富标签。 </span><span data-start='1420.75'>将它放在,当您可以用Google搜索我可能标签,您可以将,它将开始播放。 </span></p>
+
+<p><span data-start='1423.67'>您可以创建日程安排,您也可以</span><span data-start='1425.64'>做一个V-Map,所以所有的支持。 </span><span data-start='1428.3'>我们还配套广告。 </span><span data-start='1429.36'>您可以设置配套广告,您只需定义div</span><span data-start='1431.93'>标签,然后,一个广告播放时,将显示该标题。 </span><span data-start='1435.84'>如,并排,请参阅广告的播放。 </span><span data-start='1438.36'>此外,我们还特跳过这是一个出色的新功能。 </span><span data-start='1441.47'>你知道,爱在这里跳过广告吗? </span><span data-start='1443.23'>”</span><span data-start='1443.53'>我的意思是,我看三秒钟,则跳过。 </span></p>
+
+<p><span data-start='1445.53'>我无法等待跳过,对吗? </span><span data-start='1446.61'>因此,这是一个这么大的事,我们也有我们的平台配置。 </span><span data-start='1451.18'>因此,对于那些广告支持球员可以允许您的用户播放,跳过广告,</span><span data-start='1455.15'>您甚至可以利用该播放器,请执行一个</span><span data-start='1457.62'>java脚本,请单击跳过那些其实我的广告。 </span><span data-start='1460.04'>他们实际上也。 </span><span data-start='1461.18'>即使它们跳过它,他们实际上</span><span data-start='1463.06'>与之进行交互操作您的广告并不是他们,是这样吗? </span><span data-start='1464.62'>因此,您可以获得该信息。 </span><span data-start='1466.53'>因此,这些都是一些美好的东西。 </span></p>
+
+<p><span data-start='1467.47'>您可能会有所不同。 </span><span data-start='1468.97'>您可以在不同的时间长度你想跳过。 </span><span data-start='1471.05'>0秒,0秒,真的我不喜欢0秒钟。 </span><span data-start='1475.24'>因此,您可以做到这一点。 </span><span data-start='1476.81'>此外,我们还提供社会共享和相关插件。 </span><span data-start='1479.18'>因此,在顶部的一切,如果广告支持,</span><span data-start='1481.82'>想要其他人,想要其他视频显示右键? </span><span data-start='1485.19'>所以,你想要共享,与他们的朋友他们的视频观看。 </span><span data-start='1488.48'>您想让更多的人,更多观众。 </span><span data-start='1490.61'>所以,我们社会共享。 </span></p>
+
+<p><span data-start='1491.96'>他们可以在Facebook上后,您的视频。 </span><span data-start='1493.73'>他们可以开机自检时,在Twitter上和我们使用Twitter卡。 </span><span data-start='1496'>我们还建立了Facebook墙上。 </span><span data-start='1497.64'>因此,您可以将自动具有该功能的用户使用。 </span><span data-start='1501.04'>然后相关堵塞,致使相关视频,这</span><span data-start='1504.79'>也是YouTube已完成了一项伟大的工作。 </span><span data-start='1507.1'>因此,如果您的广告支持,这种奶瓶,我强烈建议您使用这种方法,</span><span data-start='1510.42'>当你表演视频,您想要显示其它相关视频。 </span><span data-start='1512.82'>所以,我看过很多视频,我甚至都没有,就像我一样是一</span><span data-start='1517.06'>件事,和所有的我突然将被吸 </span></p>
+
+<p><span data-start='1518.69'>在三个小时,只是相关视频。 </span><span data-start='1521.18'>你知道,就像50年的舞蹈或其他什么东西。 </span><span data-start='1523.86'>所以,您知道,这东西你真的</span><span data-start='1526.13'>想做你的广告的商业模式。 </span><span data-start='1528.96'>和自定义的品牌也很明显。 </span><span data-start='1531.05'>因此,我们可以让您的播放机重塑品牌。 </span><span data-start='1532.36'>将您的徽标。 </span><span data-start='1533.83'>皮肤的变化。 </span><span data-start='1534.56'>但是,您想要的,它是完全可自定义的。 </span><span data-start='1539.44'>因此,同这一起,樱桃平台已全面特别是一体化。 </span></p>
+
+<p><span data-start='1544.29'>我不会走得太深,但,因为您</span><span data-start='1546.51'>已知道,我们是支持在每个设备、每个浏览器。 </span><span data-start='1550.46'>我们的座右铭是,瑞草区盘浦洞JW播放器无处不在。 </span><span data-start='1552.91'>所以,这是整体而言,是最重要的卖点。 </span><span data-start='1555.22'>是,您不仅可以获得平台及视频管理功能。 </span><span data-start='1558.58'>在“宿主和流媒体,我们</span><span data-start='1560.1'>结合JW播放机本身。 </span><span data-start='1563.11'>因此,从控制台可以人,管理所有这些配置的玩家。 </span><span data-start='1568.12'>并且,如果您需要,您不需要使用它。 </span><span data-start='1570.17'>您可以只使用该播放器,因为我们提供给您的许可证。 </span></p>
+
+<p><span data-start='1572.87'>然后只需使用播放器。 </span><span data-start='1574.59'>因此,它的完全可自定义的、非常灵活的、</span><span data-start='1576.86'>十分强大,但它的清洁发展机制也云托管。 </span><span data-start='1579.69'>因此,它的加载速度更快,比很多的球员。 </span><span data-start='1582.97'>它还十分强大,十分可靠,因为我们不去。 </span><span data-start='1586.58'>我认为我们的,我们一样正常运行时间是99.999。 </span><span data-start='1589.37'>如果是,它确实很高,因此,在世界的任何地方。 </span><span data-start='1591.9'>因此,您的速度播放器加载,在世界的任何地方。 </span><span data-start='1596.13'>而且可以实现盈利与任何广告服务器或网络。 </span><span data-start='1598.81'>所以,我们有一个列表,其中一些合作伙伴。 </span></p>
+
+<p><span data-start='1602.04'>因此,如果你的那些家伙一样,</span><span data-start='1604.67'>与这些人合作伙伴广告服务器,不共享您的收入与YouTube。 </span><span data-start='1608.15'>您的视频已在你自己的网站,并获得自己的收益。 </span><span data-start='1611.87'>所以这是非常容易的。 </span></p></section>
+
+<section><h2><a name='ChromecastDemo'></a>chromecast演示 </h2>
+<p><span data-start='1613.29'>另有一事相告。 </span><span data-start='1614.58'>因此,这是我们的。 </span><span data-start='1617.38'>非常值得骄傲的事情,是我们瑞草区盘浦洞JW播放器Google chromecast一体化。 </span><span data-start='1621.37'>那么,是谁在这里显然用了一个chromecast和拥有一个在家吗? </span><span data-start='1626.29'>所有权利。 </span><span data-start='1626.57'>您所有的老年人,您需要获得</span><span data-start='1628.17'>一个chromecast或说服你的朋友库存材料。 </span><span data-start='1631.3'>我买了其中的六种我的朋友。 </span><span data-start='1633.01'>他们实际上是廉价的。 </span><span data-start='1634.02'>他们在谷歌的新的HDMI接口。 </span></p>
+
+<p><span data-start='1637.19'>它就像30元,25我认为的出售。 </span><span data-start='1639.24'>因此,从本质上讲它是做什么的,你发布者,您想让您</span><span data-start='1644.66'>的观众转到网站,到客厅的电视上。 </span><span data-start='1648.11'>因此,这是最廉价的,最简单的方法。 </span><span data-start='1651.14'>有的rokus,Xbox应用程序,您知道,一吨的</span><span data-start='1655.39'>东西,但它们都有很高的代价,他们也很专有的。 </span><span data-start='1659.81'>所以,你必须获得一个实际开发者编写C sharp代码</span><span data-start='1662.65'>或编写目标C或写入所有这些不同的语言。 </span><span data-start='1665.8'>那么,Google chromecast非常简单。 </span><span data-start='1668.51'>它只是利用了您的已有的Web </span></p>
+
+<p><span data-start='1670.58'>然后,您可以只投到您的电视。 </span><span data-start='1673.61'>它是如何工作的? </span><span data-start='1674.65'>因此,从本质上讲,我只是想确保我有足够的时间,所以非常迅速。 </span><span data-start='1678.93'>从云、您的浏览您的</span><span data-start='1680.67'>台式机,您的远程控制。 </span><span data-start='1683.2'>和你找到一些刚刚可以通过查找从YouTube或从</span><span data-start='1687.01'>一个站点,您的家伙要发布和现在我们播放器</span><span data-start='1690.14'>,用户要知道,我会想</span><span data-start='1692.72'>上看到这一个大屏幕,但这就像一个伟大电影高清、单板滑雪、滑雪。 </span><span data-start='1697.37'>我想要看到它的大屏幕上。 </span></p>
+
+<p><span data-start='1698.84'>有个小领衔主演)”按钮,在这里。 </span><span data-start='1701.79'>因此,这将使您单击“领衔主演”按钮,</span><span data-start='1704.36'>它将与谷歌浏览器领衔主演转换器,和镀铬领衔主演</span><span data-start='1708.63'>转换器将图,好的是什么,什么是</span><span data-start='1711.8'>位置的这段视频中,我想,从我的笔记本电脑。 </span><span data-start='1716.17'>它的用处很大转到云中,抓取的视频直接。 </span><span data-start='1719.76'>好的,然后还要下点功夫,使视频。 </span><span data-start='1722.09'>因此,它不依赖于您的带宽。 </span><span data-start='1724.3'>它只是将其直接从云。 </span><span data-start='1726.53'>播放视频。 </span></p>
+
+<p><span data-start='1727.73'>现在我的膝上型计算机和通信转换器</span><span data-start='1730.94'>来来回回每个其他的该视频。 </span><span data-start='1734.3'>所以,这是非常基本的基本需要。 </span><span data-start='1737.01'>因此,但是,一言以蔽之,我可以去观看一个视频从我的笔记本电脑</span><span data-start='1741.22'>,然后我可以立即发送到我的电视和观看。 </span><span data-start='1744.63'>只要该电视、很抱歉,只要</span><span data-start='1746.82'>您在视频chromecast chromecast浏览器支持。 </span><span data-start='1749.96'>因此这是件大事。 </span><span data-start='1751.78'>因此,作为一个发布者,这对您来说意味着什么? </span><span data-start='1753.77'>它大约需要15分钟时间,注册与Google, </span></p>
+
+<p><span data-start='1755.94'>要成为一个Google,Google应用程序ID。 </span><span data-start='1758.29'>然后你把你嵌入代码,然后你Google chromecast准备。 </span><span data-start='1762.1'>所以,最大的一件事。 </span><span data-start='1763.59'>我要做一个快速演示为您的家伙。 </span><span data-start='1765.55'>然后,我带着我设置时。 </span><span data-start='1769.88'>我只想让您快速的所有不同的东西我们不要。 </span><span data-start='1774.38'>因此,我们在这里有一个示例视频。 </span><span data-start='1777.22'>装模作样,我只去了一个您的站点,我看到这一点,看到了这段视频。 </span><span data-start='1781.86'>现在,我有一个三岁,想要</span><span data-start='1783.2'>观看的电视,而不是一个小板。 </span></p>
+
+<p><span data-start='1785.5'>所以,我想要领衔主演这一台电视机。 </span><span data-start='1788.02'>所以,这是我的电视。 </span><span data-start='1789.43'>我知道,这个屏幕是大于我的电视,但</span><span data-start='1791.07'>这仅仅是向您展示什么的在我的屏幕。 </span><span data-start='1792.89'>因此,这是在我的膝上型计算机。 </span><span data-start='1795.07'>这是您的电视机。 </span><span data-start='1796.68'>好了,现在,这台电视机是chromecast设置。 </span><span data-start='1799.83'>您可以查看组件的名称,这里chromecast。 </span><span data-start='1802.39'>然后现在,当我准备要领衔主演,</span><span data-start='1804.76'>我单击这个小特殊的按钮在我们播放器。 </span></p>
+
+<p><span data-start='1806.7'>所以,这是一个瑞草区盘浦洞JW播放器您正在查看。 </span><span data-start='1808.87'>然后单击chromecast”按钮。 </span><span data-start='1815.07'>它在那儿。 </span><span data-start='1815.89'>我要选择,现在,您可能有多个设备。 </span><span data-start='1819.34'>此设备名就在这里,我要选择此chromecast设备。 </span><span data-start='1823.14'>现在你看,这是完全可自定义的。 </span><span data-start='1826.76'>此映像,都是可以自定义的。 </span><span data-start='1828.82'>您可以有一个徽标,您也可以更改颜色,一切。 </span><span data-start='1832.23'>因此,这段视频中,chromecast在自定义程度很高。 </span><span data-start='1837.18'>现在您看到的那样,它的播放。 </span></p>
+
+<p><span data-start='1839.64'>这是一个实际预卷特。 </span><span data-start='1841.78'>这是视频本身。 </span><span data-start='1843.22'>视频的一个卡通画。 </span><span data-start='1844.34'>这是一个预压扁辊AD的电视上播放。 </span><span data-start='1848.86'>在这方面,在第二个屏幕上,这是一个配套广告。 </span><span data-start='1851.79'>这是新的第二屏幕功能。 </span><span data-start='1854'>现在,这是一个优势,因为我们没有</span><span data-start='1856.48'>其他第三方播放器现在出的这种做法。 </span><span data-start='1859.99'>因此,您可以播放广告,在一个屏幕上,并有一个配套特在第二个屏幕上。 </span><span data-start='1866.2'>和现在的实际视频开始。 </span></p>
+
+<p><span data-start='1868.75'>这是实际视频。 </span><span data-start='1869.73'>这是一个卡通,您的五岁</span><span data-start='1870.93'>大时说:“我很喜欢这段视频,然后现在。 </span><span data-start='1874.02'>他们的一部分的视频,这也是您的台式机,作为远程控制。 </span><span data-start='1878.64'>因此,实际上,您可以向前推进,从这里到不同零件的视频。 </span><span data-start='1882.75'>实际上,将散热器与播放机。 </span><span data-start='1887.3'>从谷歌铬、Google CA,嗯,很抱歉,谷歌浏览器,chromecast。 </span><span data-start='1892.36'>现在,您将看到一个小章节标记在这里呢? </span><span data-start='1894.02'>它实际上不是一个章节标记。 </span><span data-start='1895.1'>它是一个AD标记。 </span></p>
+
+<p><span data-start='1896.46'>所以,我到了这一地步的视频。 </span><span data-start='1898.81'>现在我们有了一个中间滚动播放。 </span><span data-start='1900.94'>与旋转,它的加载。 </span><span data-start='1903.4'>这是第一个一个的三个特盒。 </span><span data-start='1906.73'>那么,我们在这里一个广告计划。 </span><span data-start='1908.14'>您可以播放多个广告。 </span><span data-start='1910.26'>而这一切通过chromecast。 </span><span data-start='1911.12'>和现在的第二个问题就是防守。 </span><span data-start='1914.49'>又一次,一个伴侣卵子广告。 </span><span data-start='1917.81'>因此,配套广告显示,实际上播放电视广告。 </span></p>
+
+<p><span data-start='1921.86'>因此,您可以看到潜在的这一点。 </span><span data-start='1923.79'>我们只刮伤表面。 </span><span data-start='1925.31'>这是新的,但有一个很大的事情。 </span><span data-start='1927.87'>人在做游戏。 </span><span data-start='1930.45'>与chromecast、卡拉OK厅。 </span><span data-start='1932.5'>人在做,你知道,很多漂亮的不同,新的功能。 </span><span data-start='1935.61'>因此,对您的企业。 </span><span data-start='1938.05'>我如何想要利用这种技术? </span><span data-start='1940.04'>和瑞草区盘浦洞JW播放器实际上是利用了这一点,并使它对你们。 </span><span data-start='1944.56'>谢谢。 </span></p>
+
+<p><span data-start='1946.19'>胡国兴法官! </span></p></section>
+
+<section><h2><a name='Questions'></a>问题 </h2>
+<p><span data-start='1952.47'>好的,让我们打开了一个小Q和A</span><span data-start='1956.68'>的家伙,还记得你的补充质询? </span><span data-start='1960.98'>没有呢? </span><span data-start='1961.83'>好的。 </span><span data-start='1965.67'>“Yes”(是)。 </span><span data-start='1965.89'>从您chromecast,因此基本上是</span><span data-start='1967.73'>计算机是作为远程控制。 </span><span data-start='1971.14'>有观众发布者。 </span><span data-start='1977.26'>这使您能够在任何</span><span data-start='1979.3'>您所知,观看视频,你把。 </span></p>
+
+<p><span data-start='1983.49'>每一个浏览器,就像每个人对您的客户有chromecast。 </span><span data-start='1990.17'>您不需要在所有的硬件。 </span><span data-start='1993.01'>硬件是访问者使用。 </span><span data-start='1995.44'>硬件的实际,才刚刚开始</span><span data-start='1997.77'>,是瑞草区盘浦洞JW播放器,你就会收到我们。 </span><span data-start='2000.61'>。 </span><span data-start='2002.34'>然后你得让Google应用程序ID,然后您</span><span data-start='2004.84'>可以获得批准,然后,您实际上可以获得小按钮,并领衔主演。 </span><span data-start='2009.09'>因此,您不做任何事情。 </span><span data-start='2010.13'>。 </span></p>
+
+<p><span data-start='2011.64'>需要实际的硬件。 </span><span data-start='2013.7'>正确的。 </span><span data-start='2016.07'>“Yes”(是)。 </span><span data-start='2022.3'>很好的问题。 </span><span data-start='2023.48'>何时推出的瑞草区盘浦洞JW播放器? </span><span data-start='2025.42'>因此,实际上,我们现在处于测试阶段。 </span><span data-start='2028.32'>但是,我们很快就会出来的测试版。 </span><span data-start='2030.01'>我们遇到了一些真正的大客户帮助我们测试版测试。 </span><span data-start='2032.73'>大客户,我认为在六月早在今年六月,我们将在</span><span data-start='2037.52'>G、Google chromecast在通配符,你们要开始使用。 </span></p>
+
+<p><span data-start='2042.33'>“Yes”(是)。 </span><span data-start='2050.23'>说,一个更次。 </span><span data-start='2063.44'>因此,所有的添加,您通过chromecast运行要MP4广告。 </span><span data-start='2068.6'>因此,它,它支持MP4的一个视频。 </span><span data-start='2071.76'>现在,我们支持万维网、万维网m。 </span><span data-start='2074.46'>和我们支持MP4的音频。 </span><span data-start='2076.45'>我们支持aac和MP3。 </span><span data-start='2079.59'>因此,这些都是,这些都是我们支持。 </span><span data-start='2081.77'>很快,我们将开始</span><span data-start='2083.28'>支持HLS损益表和其他一些东西。 </span></p>
+
+<p><span data-start='2085.34'>所以现在,这些都是我们支持的格式。 </span><span data-start='2087.7'>已将html5创意,为您的广告,否则我们无法发挥它通过镀铬。 </span><span data-start='2091.41'>所以,这是镀铬领衔主演。 </span><span data-start='2092.88'>和他们使用的是HTML5的这项技术。 </span><span data-start='2095.74'>因此,它的不闪烁,好的。 </span><span data-start='2098.93'>我可以再回答几个问题,我的答案是肯定的。 </span><span data-start='2107.08'>问题提的很好。 </span><span data-start='2107.51'>这样的分析。 </span><span data-start='2108.28'>我想我谈及这一点。 </span><span data-start='2109.67'>因此,基本上,通过我们的集成,您可以 </span></p>
+
+<p><span data-start='2112.55'>使用Google分析或Adobe网站地图催化剂。 </span><span data-start='2116.52'>站点催化剂,很抱歉没有网站地图,网站发挥催化剂作用,但</span><span data-start='2119.64'>基本上,我们允许您在您自己的</span><span data-start='2122.61'>帐户,然后重新划分条带挂起,我们将有</span><span data-start='2126.04'>播放和完成发送到您的GA帐户。 </span><span data-start='2129.49'>因此,您仍然必须设置自己GA帐户</span><span data-start='2132.3'>,然后再通过这些嵌入和通过这些通过您的GA ID。 </span><span data-start='2136.25'>然后,我们,发送事件将其完成。 </span><span data-start='2139.02'>但是,我们也可通过该平台允许您自定义事件。 </span><span data-start='2142.36'>因此,你要做的一切真的是 </span></p>
+
+<p><span data-start='2143.69'>定义,您知道,您的类别,您的行动,您的</span><span data-start='2146.58'>标签,然后您可以自定义</span><span data-start='2148.32'>自己的事件发送给Google,Google分析。 </span><span data-start='2151.27'>在我们的平台,我们更深入一点,我们还,因为我们拥有这一切数据。 </span><span data-start='2156.05'>很抱歉,声音仍在。 </span><span data-start='2157.62'>我们仍然拥有所有这些数据,vid,在视频电平。 </span><span data-start='2163.56'>很抱歉。 </span><span data-start='2163.77'>在视频的页面级别,因此</span><span data-start='2166.31'>我们给你一个很大的,因此嵌入、播放、完成。 </span><span data-start='2169.33'>因此,基本上是有多少次我嵌入代码被加载。 </span></p>
+
+<p><span data-start='2172.15'>有多少P、T、人民是点击“播放”按钮? </span><span data-start='2174.84'>有多少人在观看视频的? </span><span data-start='2177.23'>因此,我们基本上是为您提供此信息。 </span><span data-start='2179.13'>然后我们也会向您唯一观众。 </span><span data-start='2180.65'>这样的唯一观众,如IP地址和用户代理。 </span><span data-start='2184.98'>噢,明白了。 </span><span data-start='2194.1'>是的,因此参与分析,这一点</span><span data-start='2197.22'>让我们有现在。 </span><span data-start='2199.14'>因此,我们的交往分析实际上是十分,这是一个很大的不同。 </span><span data-start='2202.07'>您可以看到,基于时间线的视频。 </span></p>
+
+<p><span data-start='2205'>有多少用户。 </span><span data-start='2206.25'>因此,您可能会看到一个,因此,您可能会看到一个</span><span data-start='2207.88'>像高在一开始就看每个人的第一分钟</span><span data-start='2210.97'>,然后发生了一些意外的事情,然后他们就骤降,</span><span data-start='2213.44'>可能是其他人,他们向一些,真正促使他们着迷。 </span><span data-start='2216.84'>然后它会再次进行备份。 </span><span data-start='2218.03'>所以你会看到,其实你是收视率,</span><span data-start='2220.11'>如通过视频的长度。 </span><span data-start='2222.83'>好的。 </span><span data-start='2223.19'>“Yes”(是)。 </span></p>
+
+<p><span data-start='2225.06'>因此,正如我以前说过在屏幕上,我认为,我们的时间。 </span><span data-start='2230.77'>我们想让您享用午餐。 </span><span data-start='2231.68'>因此,如果您有更多问题,请告诉我们,我们可以,我们有一个电子邮件,mktg@jwplayer.com。 </span><span data-start='2238.45'>因此,提出问题、发表评论、反馈,请给我们发电子邮件的问题。 </span><span data-start='2242.06'>我们将与这些问题。 </span><span data-start='2243.91'>下一步,我们将12p.m美味午餐的照顾纽曼的厨房。 </span><span data-start='2248.95'>并在1P.M如果您有更多问题</span><span data-start='2250.77'>关于广告和货币化您的视频,请来</span><span data-start='2253.83'>的离线讨论会话要更多的钱少问题,嗯,在线</span><span data-start='2257.2'>视频、移动视频内容和广告,布赖恩和Amy。 </span></p>
+</section>
+
+
+
+
+</div>
+
+<style type="text/css">#videoTranscript p span { cursor: pointer; }
+  #videoTranscript p span:hover { border-bottom: 1px dotted #128DEB; }
+</style>
+<script type="text/javascript">
+jwplayer().addButton(
+  "download.png"/*tpa=http://demo.jwplayer.com/interactive-transcript/download.png*/,
+  "Download Slides",
+  function(){window.location.href = "http://assistly-production.s3.amazonaws.com/150942/kb_article_attachments/33505/platform_original.pdf?AWSAccessKeyId=AKIAJNSFWOZ6ZS23BMKQ&Expires=1434936624&Signature=qj5O3fAqIrEqvzdXZEb1b9Zum%2Bw%3D&response-content-disposition=filename%3D%22platform.pdf%22&response-content-type=application%2Fpdf";},
+  "download"
+);
+var transcript = document.getElementById("videoTranscript");
+transcript.addEventListener("click",function(e){
+  if(e.target.getAttribute("data-start")) {
+    jwplayer().seek(e.target.dataset.start);
+    document.body.scrollTop = 0;
+  }
+});
+</SCRIPT>
+
+
+
+
+<div id="rate_article_container">
+<div id="rate_article_login">
+<div>
+请 <a href="javascript:if(confirm('http://account.jwplayer.com/support  \n\n�ļ�� Teleport Ultra ��, �Ϊ ��һ��·���Ϊ����ĵ�  \n\n�������?'))window.location='http://account.jwplayer.com/support'" tppabs="http://support.jwplayer.com/customer/en/authentication/multipass?return_to=%2Fcustomer%2Fportal%2Farticles%2F1620802-video-video-business-models">登录</a> 以离开您的反馈意见对这一条。
+</div>
+</div>
+</div>
+
+
+
+
+
+<div id='attachments'>
+<strong>附件 </strong>
+<ul>
+
+<li>
+           <a href="javascript:if(confirm('http://assistly-production.s3.amazonaws.com/150942/kb_article_attachments/33505/platform_original.pdf?AWSAccessKeyId=AKIAJNSFWOZ6ZS23BMKQ&Expires=1434936620&Signature=xMb806nxV8qK9ZsKCmxK9zLO1uk%3D&response-content-disposition=filename%3D%22platform.pdf%22&response-content-type=application%2Fpdf  \n\n�ļ�� Teleport Ultra ��, �Ϊ ��һ��·���Ϊ����ĵ�  \n\n�������?'))window.location='http://assistly-production.s3.amazonaws.com/150942/kb_article_attachments/33505/platform_original.pdf?AWSAccessKeyId=AKIAJNSFWOZ6ZS23BMKQ&Expires=1434936620&Signature=xMb806nxV8qK9ZsKCmxK9zLO1uk%3D&response-content-disposition=filename%3D%22platform.pdf%22&response-content-type=application%2Fpdf'" tppabs="http://support.jwplayer.com/customer/portal/kb_article_attachments/33505/original.pdf?1405025550" class="kb_article_attachment_a" target="_blank">平台.PDF(英语)</a>
+</li>
+
+</ul>
+</div>
+
+</div><!--end:page_article-->
+
+<!--end:portal_body-->
+</div> <!-- main -->
+
+<div class="sidebar">
+
+<form action="http://support.jwplayer.com/customer/portal/articles/search" method='get' id='support-search' class='support-search-small'>
+<fieldset id="support_search">
+<input id="q2" maxlength='100' name='q' type='text' value='' placeholder="Search Support">
+<input id='support-search-submit' type='submit' value='Search' />
+</fieldset> <!-- support_search -->
+</form>
+
+
+<nav>
+<h2>选择一个主题: </h2>
+<ul>
+
+
+
+
+
+<li><a href="articles.htm" tppabs="http://support.jwplayer.com/customer/portal/topics/601065-embedding/articles">嵌入</a></li>
+
+
+
+<li><a href="articles-4.htm" tppabs="http://support.jwplayer.com/customer/portal/topics/601064-customization/articles">自定义</a></li>
+
+
+
+<li><a href="articles-5.htm" tppabs="http://support.jwplayer.com/customer/portal/topics/564477-streaming/articles">数据流</a></li>
+
+
+
+<li><a href="articles-6.htm" tppabs="http://support.jwplayer.com/customer/portal/topics/564476-analytics/articles">分析</a></li>
+
+
+
+<li><a href="articles-1.htm" tppabs="http://support.jwplayer.com/customer/portal/topics/605644-video-ads/articles">视频广告</a></li>
+
+
+
+<li><a href="articles-7.htm" tppabs="http://support.jwplayer.com/customer/portal/topics/677400-tv-casting/articles">广播电视</a></li>
+
+
+
+<li class="active"><a href="articles-2.htm" tppabs="http://support.jwplayer.com/customer/portal/topics/605645-jw-platform/articles">瑞草区盘浦洞JW平台</a></li>
+
+
+
+<li><a href="articles-8.htm" tppabs="http://support.jwplayer.com/customer/portal/topics/710907-mobile-sdks/articles">移动SDK</a></li>
+
+
+
+<li><a href="articles-9.htm" tppabs="http://support.jwplayer.com/customer/portal/topics/564475-javascript-api/articles">JavaScript API</a></li>
+
+
+
+<li><a href="articles-10.htm" tppabs="http://support.jwplayer.com/customer/portal/topics/635789-platform-api/articles">平台的API</a></li>
+
+
+
+
+
+</ul>
+</nav> <!-- sidebar_nav -->
+
+     <!--
+      <div class="sidebar_promo">
+        <h3>Don't Have JW Player?</h3>
+        <a href="http://www.jwplayer.com" class="promo_button">Get It Here <span class="icon">&nbsp;</span></a>
+      </div>
+      -->
+     <!-- sidebar_promo -->
+
+<div id="sidebar_twitter">
+<h3>我们继续关注: </h3>
+       <a href="javascript:if(confirm('http://twitter.com/jwpsupport  \n\n�ļ�� Teleport Ultra ��, �Ϊ ��һ��·���Ϊ����ĵ�  \n\n�������?'))window.location='http://twitter.com/jwpsupport'" tppabs="http://twitter.com/jwpsupport">@jwpsupport</a>
+       <a href="javascript:if(confirm('http://twitter.com/jwplatform  \n\n�ļ�� Teleport Ultra ��, �Ϊ ��һ��·���Ϊ����ĵ�  \n\n�������?'))window.location='http://twitter.com/jwplatform'" tppabs="http://twitter.com/jwplatform">@jwplatform</a>
+</div> <!-- sidebar_twitter -->
+</div> <!-- sidebar -->
+</div> <!-- section_wrapper -->
+</section> <!-- page_wrapper -->
+
+<section id="player_bottom_promo">
+<div class="section_wrapper">
+<h2>仍然没有瑞草区盘浦洞JW播放器呢? <a class="promo_button" href="javascript:if(confirm('http://www.jwplayer.com/sign-up/  \n\n�ļ�� Teleport Ultra ��, �Ϊ ��һ��·���Ϊ����ĵ�  \n\n�������?'))window.location='http://www.jwplayer.com/sign-up/'" tppabs="http://www.jwplayer.com/sign-up/">点击此处获得 <span></span></a></h2>
+</div><!-- /.section_wrapper -->
+</section> <!-- player_bottom_promo -->
+
+
+<footer id="site_footer">
+<section id="footer_links">
+<div class="section_wrapper clearfix">
+<div id="player_column" class="nav_column">
+<h4>解决方案 </h4>
+<ul>
+<li><a href="javascript:if(confirm('http://www.jwplayer.com/publishers-broadcasters/  \n\n�ļ�� Teleport Ultra ��, �Ϊ ��һ��·���Ϊ����ĵ�  \n\n�������?'))window.location='http://www.jwplayer.com/publishers-broadcasters/'" tppabs="http://www.jwplayer.com/publishers-broadcasters/">出版商和广播公司</a></li>
+<li><a href="javascript:if(confirm('http://www.jwplayer.com/syndication-networks/  \n\n�ļ�� Teleport Ultra ��, �Ϊ ��һ��·���Ϊ����ĵ�  \n\n�������?'))window.location='http://www.jwplayer.com/syndication-networks/'" tppabs="http://www.jwplayer.com/syndication-networks/">广告和网络协同内容</a></li>
+<li><a href="javascript:if(confirm('http://www.jwplayer.com/developers-agencies/  \n\n�ļ�� Teleport Ultra ��, �Ϊ ��һ��·���Ϊ����ĵ�  \n\n�������?'))window.location='http://www.jwplayer.com/developers-agencies/'" tppabs="http://www.jwplayer.com/developers-agencies/"></a>开发人员和机构 </li>
+<li><a href="javascript:if(confirm('http://www.jwplayer.com/enterprise-brands/  \n\n�ļ�� Teleport Ultra ��, �Ϊ ��һ��·���Ϊ����ĵ�  \n\n�������?'))window.location='http://www.jwplayer.com/enterprise-brands/'" tppabs="http://www.jwplayer.com/enterprise-brands/">企业和品牌</a></li>
+<li><a href="javascript:if(confirm('http://www.jwplayer.com/oem-partner/  \n\n�ļ�� Teleport Ultra ��, �Ϊ ��һ��·���Ϊ����ĵ�  \n\n�������?'))window.location='http://www.jwplayer.com/oem-partner/'" tppabs="http://www.jwplayer.com/oem-partner/">OEM合作伙伴</a></li>
+</ul>
+</div> <!-- nav_column -->
+<div id="company_column" class="nav_column">
+<h4>产品 </h4>
+<ul>
+<li><a href="javascript:if(confirm('http://www.jwplayer.com/products/player/  \n\n�ļ�� Teleport Ultra ��, �Ϊ ��һ��·���Ϊ����ĵ�  \n\n�������?'))window.location='http://www.jwplayer.com/products/player/'" tppabs="http://www.jwplayer.com/products/player/">瑞草区盘浦洞JW播放器</a></li>
+<li><a href="javascript:if(confirm('http://www.jwplayer.com/products/jwplayer-ads/  \n\n�ļ�� Teleport Ultra ��, �Ϊ ��һ��·���Ϊ����ĵ�  \n\n�������?'))window.location='http://www.jwplayer.com/products/jwplayer-ads/'" tppabs="http://www.jwplayer.com/products/jwplayer-ads/">瑞草区盘浦洞JW广告</a></li>
+<li><a href="javascript:if(confirm('http://www.jwplayer.com/products/jwplatform/  \n\n�ļ�� Teleport Ultra ��, �Ϊ ��һ��·���Ϊ����ĵ�  \n\n�������?'))window.location='http://www.jwplayer.com/products/jwplatform/'" tppabs="http://www.jwplayer.com/products/jwplatform/">瑞草区盘浦洞JW平台</a></li>
+<li><a href="javascript:if(confirm('http://www.jwplayer.com/products/mobile-sdk  \n\n�ļ�� Teleport Ultra ��, �Ϊ ��һ��·���Ϊ����ĵ�  \n\n�������?'))window.location='http://www.jwplayer.com/products/mobile-sdk'" tppabs="http://www.jwplayer.com/products/mobile-sdk">移动SDK</a></li>
+<li><a href="javascript:if(confirm('http://www.jwplayer.com/products/publisher-analytics  \n\n�ļ�� Teleport Ultra ��, �Ϊ ��һ��·���Ϊ����ĵ�  \n\n�������?'))window.location='http://www.jwplayer.com/products/publisher-analytics'" tppabs="http://www.jwplayer.com/products/publisher-analytics">发布器分析</a></li>
+<li><a href="javascript:if(confirm('http://www.jwplayer.com/contact-us/  \n\n�ļ�� Teleport Ultra ��, �Ϊ ��һ��·���Ϊ����ĵ�  \n\n�������?'))window.location='http://www.jwplayer.com/contact-us/'" tppabs="http://www.jwplayer.com/contact-us/">联系我们</a></li>
+</ul>
+</div> <!-- nav_column -->
+<div id="platform_column" class="nav_column">
+<h4>支持 </h4>
+<ul>
+<li><a href="articles-3.htm" tppabs="http://support.jwplayer.com/customer/portal/topics/601063-frequently-asked-questions/articles">常见问题</a></li>
+<li><a href="index.htm" tppabs="http://support.jwplayer.com/">支持文章</a></li>
+<li><a href="javascript:if(confirm('http://www.jwplayer.com/wizard/  \n\n�ļ�� Teleport Ultra ��, �Ϊ ��һ��·���Ϊ����ĵ�  \n\n�������?'))window.location='http://www.jwplayer.com/wizard/'" tppabs="http://www.jwplayer.com/wizard/">设置向导</a></li>
+<li><a href="javascript:if(confirm('http://www.jwplayer.com/download/  \n\n�ļ�� Teleport Ultra ��, �Ϊ ��һ��·���Ϊ����ĵ�  \n\n�������?'))window.location='http://www.jwplayer.com/download/'" tppabs="http://www.jwplayer.com/download/">下载信息</a></li>
+<li><a href="javascript:if(confirm('http://www.longtailvideo.com/support/open-video-ads/  \n\n�ļ�� Teleport Ultra ��, �Ϊ ��һ��·���Ϊ����ĵ�  \n\n�������?'))window.location='http://www.longtailvideo.com/support/open-video-ads/'" tppabs="http://www.longtailvideo.com/support/open-video-ads/">打开视频广告</a></li>
+<li><a href="1413089-javascript-api-reference.htm" tppabs="http://support.jwplayer.com/customer/portal/articles/1413089-javascript-api-reference">播放器API</a></li>
+<li><a href="javascript:if(confirm('http://apidocs.jwplayer.com/  \n\n�ļ�� Teleport Ultra ��, �Ϊ ��һ��·���Ϊ����ĵ�  \n\n�������?'))window.location='http://apidocs.jwplayer.com/'" tppabs="http://apidocs.jwplayer.com/">平台的API</a></li>
+</ul>
+</div> <!-- nav_column -->
+<div id="quicklinks_column" class="nav_column">
+<h4>创新 </h4>
+<ul>
+<li><a href="javascript:if(confirm('http://www.jwplayer.com/html5/  \n\n�ļ�� Teleport Ultra ��, �Ϊ ��һ��·���Ϊ����ĵ�  \n\n�������?'))window.location='http://www.jwplayer.com/html5/'" tppabs="http://www.jwplayer.com/html5/">HTML5报告</a></li>
+<li><a href="javascript:if(confirm('http://www.jwplayer.com/trends/  \n\n�ļ�� Teleport Ultra ��, �Ϊ ��һ��·���Ϊ����ĵ�  \n\n�������?'))window.location='http://www.jwplayer.com/trends/'" tppabs="http://www.jwplayer.com/trends/">趋势报告</a></li>
+<li><a href="javascript:if(confirm('http://www.jwplayer.com/innovation/research/  \n\n�ļ�� Teleport Ultra ��, �Ϊ ��һ��·���Ϊ����ĵ�  \n\n�������?'))window.location='http://www.jwplayer.com/innovation/research/'" tppabs="http://www.jwplayer.com/innovation/research/">研究</a></li>
+<li><a href="javascript:if(confirm('http://www.jwplayer.com/innovation/experiments/  \n\n�ļ�� Teleport Ultra ��, �Ϊ ��һ��·���Ϊ����ĵ�  \n\n�������?'))window.location='http://www.jwplayer.com/innovation/experiments/'" tppabs="http://www.jwplayer.com/innovation/experiments/">实验</a></li>
+<li><a href="javascript:if(confirm('http://www.jwplayer.com/innovation/roadmap/  \n\n�ļ�� Teleport Ultra ��, �Ϊ ��һ��·���Ϊ����ĵ�  \n\n�������?'))window.location='http://www.jwplayer.com/innovation/roadmap/'" tppabs="http://www.jwplayer.com/innovation/roadmap/">路线图</a></li>
+</ul>
+</div> <!-- nav_column -->
+</div> <!-- section_wrapper -->
+</section> <!-- footer_links -->
+<section id="footer_copyright">
+<div class="section_wrapper">
+<p style="margin-left:-100px;">版权所有©2014筏广告解决方案。 保留所有权利。 筏视频是一个注册商标。 &nbsp;<a href="javascript:if(confirm('http://www.jwplayer.com/tos/  \n\n�ļ�� Teleport Ultra ��, �Ϊ ��һ��·���Ϊ����ĵ�  \n\n�������?'))window.location='http://www.jwplayer.com/tos/'" tppabs="http://www.jwplayer.com/tos/">服务条款</a> / <a href="javascript:if(confirm('http://www.jwplayer.com/privacy/  \n\n�ļ�� Teleport Ultra ��, �Ϊ ��һ��·���Ϊ����ĵ�  \n\n�������?'))window.location='http://www.jwplayer.com/privacy/'" tppabs="http://www.jwplayer.com/privacy/">隐私政策</a> / <a href="javascript:if(confirm('http://www.jwplayer.com/privacy/  \n\n�ļ�� Teleport Ultra ��, �Ϊ ��һ��·���Ϊ����ĵ�  \n\n�������?'))window.location='http://www.jwplayer.com/privacy/#cookies'" tppabs="http://www.jwplayer.com/privacy/#cookies">ad选项</a> / <a href="javascript:if(confirm('http://www.jwplayer.com/dmca/  \n\n�ļ�� Teleport Ultra ��, �Ϊ ��һ��·���Ϊ����ĵ�  \n\n�������?'))window.location='http://www.jwplayer.com/dmca/'" tppabs="http://www.jwplayer.com/dmca/">DMCA</a></p>
+     <a class="made_in_ny" href="javascript:if(confirm('http://wearemadeinny.com/  \n\n�ļ�� Teleport Ultra ��, �Ϊ ��һ��·���Ϊ����ĵ�  \n\n�������?'))window.location='http://wearemadeinny.com/'" tppabs="http://wearemadeinny.com/" rel="nofollow" target="_blank">在纽约所作</a>
+<span class="logo">瑞草区盘浦洞JW播放器 </span>
+<p style="position: absolute; width: 100%; margin: 0; bottom: 0;"><a href="javascript:if(confirm('http://www.desk.com/  \n\n�ļ�� Teleport Ultra ��, �Ϊ ��һ��·���Ϊ����ĵ�  \n\n�������?'))window.location='http://www.desk.com/'" tppabs="http://www.desk.com/">客户服务软件</a> 由desk.com </p>
+</div> <!-- section_wrapper -->
+</section> <!-- footer_copyright -->
+</footer> <!-- footer -->
+
+<!-- External Variables for Portal Header -->
+<div id="desk-external-variables-header" class="desk-external-variables" style="display: none;">
+<div id="read_only"></div>
+<div id="site-default_mailbox">supportdesk@jwplayer.com </div>
+<div id="desk_javascript_host">http://assets1.desk.com/ </div>
+<div id="twitter_enabled">False </div>
+<div id="twitter_username">服务台 </div>
+<div id="system-snippets-loading">加载 </div>
+<div id="system-snippets-seconds_ago">几秒前 </div>
+<div id="system-snippets-a_minute_ago">一分钟前 </div>
+<div id="system-snippets-minutes_ago">分钟前 </div>
+<div id="system-snippets-an_hour_ago">一个小时前 </div>
+<div id="system-snippets-hours_ago">小时前 </div>
+<div id="system-snippets-a_day_ago">前一天 </div>
+<div id="system-snippets-days_ago">天前 </div>
+<div id="system-snippets-about">关于 </div>
+<div id="enable_gs">False </div>
+<div id="system-snippets-invalid_characters_found">找到无效字符 </div>
+<div id="site-search_autocomplete_articles_url">/客户/en/portal/文章/自动完成功能 </div>
+<div id="search-term"></div>
+
+</div>
+
+<script type="text/javascript" src="desk.portal.shared-1.js" tppabs="http://assets1.desk.com/portal/desk.portal.shared.js"></SCRIPT>
+<script type="text/javascript" src="desk.portal.header-1.js" tppabs="http://assets1.desk.com/portal/desk.portal.header.js"></SCRIPT>
+<script type="text/javascript" src="desk.portal.body.layout_footer-1.js" tppabs="http://assets1.desk.com/portal/desk.portal.body.layout_footer.js"></SCRIPT>
+
+<!-- Start GA Code -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','analytics.js'/*tpa=http://www.google-analytics.com/analytics.js*/,'ga');
+ga('create', 'UA-42148455-1', 'http://support.jwplayer.com/customer/portal/articles/support.jwplayer.com');
+ga('send', 'pageview');
+</SCRIPT>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1047558004;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</SCRIPT>
+<script type="text/javascript" src="conversion.js" tppabs="http://www.googleadservices.com/pagead/conversion.js">
+</SCRIPT>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="-value=0&guid=ON&script=0.gif" tppabs="http://googleads.g.doubleclick.net/pagead/viewthroughconversion/1047558004/?value=0&guid=ON&script=0"/>
+</div>
+</noscript>
+
+
+	</body>
+</html>

@@ -1,0 +1,1 @@
+document.write("<div class='botrplayer' id='botr_vast_7r4QJgSN'><div style='display:block; width:480px; height:270px; background: #000 url(http://content.jwplatform.com/staticfiles/not_available.jpg) no-repeat center center; text-indent:-999px;'>Video not found</div></div>");

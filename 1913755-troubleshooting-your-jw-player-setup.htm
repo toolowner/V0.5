@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html>
+<head>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8" />
+
+	
+		<meta http-equiv="X-UA-Compatible" content="IE=8; IE=9" />
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"http://support.jwplayer.com/customer/portal/articles/bam.nr-data.net","errorBeacon":"http://support.jwplayer.com/customer/portal/articles/bam.nr-data.net","licenseKey":"bceadb921a","applicationID":"3974850,3970295","transactionName":"JlpeF0ENCggEExtXTRZBXw5WEEkUDhNAVVRKXlI8UhASDQINUUcXFl1fFA==","queueTime":0,"applicationTime":232,"agent":"nr-632.min-5.js"/*tpa=http://support.jwplayer.com/customer/portal/articles/js-agent.newrelic.com/nr-632.min.js*/}</SCRIPT>
+<script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VQcFVlRACwoHUFlXBw=="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=s(e),f=c.length,u=i(a,o,r),d=0;f>d;d++)c[d].apply(u,n);return u}function a(t,e){f[t]=s(t).concat(e)}function s(t){return f[t]||[]}function c(){return n(e)}var f={};return{on:a,emit:e,create:c,listeners:s,_events:f}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t){try{i.console&&console.log(t)}catch(e){}}var n,r=t("ee"),o=t(1),i={};try{n=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(i.console=!0,-1!==n.indexOf("dev")&&(i.dev=!0),-1!==n.indexOf("nr_dev")&&(i.nrDev=!0))}catch(a){}i.nrDev&&r.on("internal-error",function(t){e(t.stack)}),i.dev&&r.on("fn-err",function(t,n,r){e(r.stack)}),i.dev&&(e("NR AGENT IN DEVELOPMENT MODE"),e("flags: "+o(i,function(t){return t}).join(", ")))},{1:23,ee:"QJf3ax"}],4:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(f){try{r("ierr",[f,(new Date).getTime(),!0])}catch(u){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(6),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,t(5),window.onerror=e;try{throw new Error}catch(f){"stack"in f&&(t(1),t(2),"addEventListener"in window&&t(3),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)&&t(4),s=!0)}i.on("fn-start",function(){s&&(c+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&c>0&&(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:10,2:9,3:7,4:11,5:3,6:24,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t){t("loader").features.ins=!0},{loader:"G9z0Bl"}],6:[function(t){function e(){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var n=t("ee"),r=t("handle"),o=t(1),i=t(2);t("loader").features.stn=!0,t(3),n.on("fn-start",function(t){var e=t[0];e instanceof Event&&(this.bstStart=Date.now())}),n.on("fn-end",function(t,e){var n=t[0];n instanceof Event&&r("bst",[n,e,this.bstStart,Date.now()])}),o.on("fn-start",function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),o.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),this.bstType])}),i.on("fn-start",function(){this.bstStart=Date.now()}),i.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),"requestAnimationFrame"])}),n.on("pushState-start",function(){this.time=Date.now(),this.startPath=location.pathname+location.hash}),n.on("pushState-end",function(){r("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),"addEventListener"in window.performance&&(window.performance.addEventListener("webkitresourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.webkitClearResourceTimings()},!1),window.performance.addEventListener("resourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.clearResourceTimings()},!1)),document.addEventListener("scroll",e,!1),document.addEventListener("keypress",e,!1),document.addEventListener("click",e,!1)}},{1:10,2:9,3:8,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],7:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=(t(1),t("ee").create()),i=t(2)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&&!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&&n(s);for(var c=XMLHttpRequest.prototype;c&&!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&&n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t){if(t[1]){var e=t[1];"function"==typeof e?this.wrapped=t[1]=a(e,"nr@wrapped",function(){return i(e,"fn-",null,e.name||"anonymous")}):"function"==typeof e.handleEvent&&i.inPlace(e,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:24,2:25,ee:"QJf3ax",gos:"7eSDFh"}],8:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window.history,["pushState"],"-")},{1:25,2:24,ee:"QJf3ax"}],9:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:25,2:24,ee:"QJf3ax"}],10:[function(t,e){function n(t,e,n){t[0]=o(t[0],"fn-",null,n)}var r=(t(2),t("ee").create()),o=t(1)(r);e.exports=r,o.inPlace(window,["setTimeout","setInterval","setImmediate"],"setTimer-"),r.on("setTimer-start",n)},{1:25,2:24,ee:"QJf3ax"}],11:[function(t,e){function n(){f.inPlace(this,p,"fn-")}function r(t,e){f.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}function i(t,e){for(var n in t)e[n]=t[n];return e}var a=t("ee").create(),s=t(1),c=t(2),f=c(a),u=c(s),d=window.XMLHttpRequest,p=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=a,window.XMLHttpRequest=function(t){var e=new d(t);try{a.emit("new-xhr",[],e),u.inPlace(e,["addEventListener","removeEventListener"],"-",o),e.addEventListener("readystatechange",n,!1)}catch(r){try{a.emit("internal-error",[r])}catch(i){}}return e},i(d,XMLHttpRequest),XMLHttpRequest.prototype=d.prototype,f.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),a.on("send-xhr-start",r),a.on("open-xhr-start",r)},{1:7,2:25,ee:"QJf3ax"}],12:[function(t){function e(t){var e=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!e.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var a=t.responseType,f="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,u=n(f);if(u&&(r.rxSize=u),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&&(e.cat=d.split(", ").pop())}}else e.status=0;r.cbTime=this.cbTime,o("xhr",[e,r,this.startTime])}}}function n(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,f=t(1);t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=e,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,e){var r=this.metrics,o=t[0],i=this;if(r&&o){var f=n(o);f&&(r.txSize=f)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{a.emit("internal-error",[n])}catch(r){}}};for(var u=0;c>u;u++)e.addEventListener(s[u],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof XMLHttpRequest&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:13,3:11,4:7,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],13:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],14:[function(t,e){function n(t){return function(){r(t,[(new Date).getTime()].concat(i(arguments)))}}var r=t("handle"),o=t(1),i=t(2);"undefined"==typeof window.newrelic&&(newrelic=window.NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit","noticeError"];o(a,function(t,e){window.NREUM[e]=n("api-"+e)}),e.exports=window.NREUM},{1:23,2:24,handle:"D5DuLP"}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):(o[t]||(o[t]=[]),void o[t].push(e))}var r=t("ee").create(),o={};e.exports=n,n.ee=r,r.q=o},{ee:"QJf3ax"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info,e=f.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){s(d,function(e,n){e in t||(t[e]=n)});var n="https"===u.split(":")[0]||t.sslForHttp;p.proto=n?"https://":"http://",a("mark",["onload",i()]);var r=f.createElement("script");r.src=p.proto+t.agent,e.parentNode.insertBefore(r,e)}}function r(){"complete"===f.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=t(1),c=(t(2),window),f=c.document,u=(""+location).split("?")[0],d={beacon:"http://support.jwplayer.com/customer/portal/articles/bam.nr-data.net",errorBeacon:"http://support.jwplayer.com/customer/portal/articles/bam.nr-data.net",agent:"nr-632.min-5.js"/*tpa=http://support.jwplayer.com/customer/portal/articles/js-agent.newrelic.com/nr-632.min.js*/},p=e.exports={offset:i(),origin:u,features:{}};f.addEventListener?(f.addEventListener("DOMContentLoaded",o,!1),c.addEventListener("load",n,!1)):(f.attachEvent("onreadystatechange",r),c.attachEvent("onload",n)),a("mark",["firstbyte",i()])},{1:23,2:14,handle:"D5DuLP"}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],23:[function(t,e){function n(t,e){var n=[],o="",i=0;for(o in t)r.call(t,o)&&(n[i]=e(o,t[o]),i+=1);return n}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],24:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],25:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@wrapper",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,f;try{i=this,n=o(arguments),s=r&&r(n,i)||{}}catch(d){u([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return f=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,f],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=!0,f(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,f?s+o:o,i,s))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){u([o,e,n,r])}}function f(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){u([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function u(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:24,ee:"QJf3ax"}]},{},["G9z0Bl",4,12,6,5]);</SCRIPT>
+<meta pod-id="" />
+	<link href="portal_jqueryui_only-ae2078f5d9247e97c310caf0c453b7d9-2.css" tppabs="http://assets2.desk.com/assets/portal_jqueryui_only-ae2078f5d9247e97c310caf0c453b7d9.css" media="screen" rel="stylesheet" type="text/css" />
+		<script src="vendor-c0a3f0c532dd6db2d09875a0ea69a8b0-3.js" tppabs="http://assets0.desk.com/assets/vendor-c0a3f0c532dd6db2d09875a0ea69a8b0.js" type="text/javascript"></SCRIPT>
+		<script src="customer_widget-044efc6df9c5a6cdfe09ae38cde0fa38.js" tppabs="http://assets2.desk.com/assets/customer_widget-044efc6df9c5a6cdfe09ae38cde0fa38.js" type="text/javascript"></SCRIPT>
+		<script src="portal-91f2c05bc750c60d8436b97ba49ac1d7.js" tppabs="http://assets0.desk.com/assets/portal-91f2c05bc750c60d8436b97ba49ac1d7.js" type="text/javascript"></SCRIPT>
+
+
+		
+		<script src="jsapi-key=ABQIAAAAQO2RPu5r12mVC40HMDIFHRQqrBpdv_jP_dFl8Cw_MxS37sDB3xTXnsXso23z1ROPVCqEVVv6cqz_cA" tppabs="http://www.google.com/jsapi?key=ABQIAAAAQO2RPu5r12mVC40HMDIFHRQqrBpdv_jP_dFl8Cw_MxS37sDB3xTXnsXso23z1ROPVCqEVVv6cqz_cA" type="text/javascript"></SCRIPT>
+	<script src="tracking-fa783f3c0c6abfbb760eb8ead6cb554e-2.js" tppabs="http://assets0.desk.com/assets/tracking-fa783f3c0c6abfbb760eb8ead6cb554e.js" type="text/javascript"></SCRIPT>
+
+<script src="deskanalytics.js" tppabs="http://deskwww.s3.amazonaws.com/new/javascripts/deskanalytics.js" type="text/javascript"></SCRIPT>
+
+
+<script src="production-158454f93db4467614c0b03dd247b5b0.js" tppabs="http://assets3.desk.com/assets/tracking/settings/production-158454f93db4467614c0b03dd247b5b0.js" type="text/javascript"></SCRIPT>
+
+	<meta content="authenticity_token" name="csrf-param" />
+<meta content="vH7NF+Ng8VxSPcDoSb8Ai+/2vhRkukQ0dSBVqGu/7Iw=" name="csrf-token" />
+
+		
+
+<title>
+瑞草区盘浦洞JW播放器
+
+故障排除|瑞草区盘浦洞JW播放器设置
+
+</title>
+
+<link rel="stylesheet" href="reset.css" tppabs="http://support-static.jwplayer.com.s3-website-us-east-1.amazonaws.com/css/reset.css" type="text/css" media="screen">
+<link rel="stylesheet" href="jwsupport.css" tppabs="http://support-static.jwplayer.com.s3-website-us-east-1.amazonaws.com/css/jwsupport.css" type="text/css" media="screen">
+<script type="text/javascript" src="jquery-1.9.1.js" tppabs="http://support-static.jwplayer.com.s3-website-us-east-1.amazonaws.com/js/jquery-1.9.1.js"></SCRIPT>
+<script type="text/javascript">(function() { jQuery.noConflict(); }())</SCRIPT>
+<script type="text/javascript" src="jquery-ui-1.10.3.custom.min.js" tppabs="http://support-static.jwplayer.com.s3-website-us-east-1.amazonaws.com/js/jquery-ui-1.10.3.custom.min.js"></SCRIPT>
+<script type="text/javascript" src="support.js" tppabs="http://support-static.jwplayer.com.s3-website-us-east-1.amazonaws.com/js/support.js"></SCRIPT>
+<script src="5V3tOP97EeK2SxIxOUCPzg.js" tppabs="http://jwpsrv.com/library/5V3tOP97EeK2SxIxOUCPzg.js"></SCRIPT>
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $('.ui-autocomplete').css({"width": 560});
+
+  var elementArr = ['.codeBlock', 'pre', 'code', 'fvch-codeblock'];
+
+  for(var i = 0; i <= elementArr.length; i++){
+    $(elementArr[i]).each(function(index, value){
+      $(this).addClass("notranslate");
+    });
+  }
+
+});
+</SCRIPT>
+
+
+<link rel='SHORTCUT ICON' type='image/ico' href='https://jwplayer.desk.com/customer/portal/theme_attachments/16139?cb=1389736032397' />
+<link rel='icon' type='image/png' href='https://jwplayer.desk.com/customer/portal/theme_attachments/16139?cb=1389736032397' />
+
+
+
+<meta property="og:title" content="Troubleshooting your JW Player setup"/>
+<meta property="og:type" content="article"/>
+<meta property="og:site_name" content="JW Player"/>
+<meta property="og:description"
+content="If you&#x27;re having some issues getting your player set up, there are quite a few steps that can be taken to figure th..."/>
+
+
+
+
+<style type="text/css">
+    iframe[name='google_conversion_frame'] {
+    height: 0 !important;
+    width: 0 !important;
+    line-height: 0 !important;
+    font-size: 0 !important;
+    margin-top: -13px;
+    float: left;
+    }
+  </style>
+
+<script>(function() {
+  var _fbq = window._fbq || (window._fbq = []);
+  if (!_fbq.loaded) {
+    var fbds = document.createElement('script');
+    fbds.async = true;
+    fbds.src = 'fbds.js'/*tpa=http://connect.facebook.net/en_US/fbds.js*/;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(fbds, s);
+    _fbq.loaded = true;
+  }
+  _fbq.push(['addPixelId', '1500628376860149']);
+})();
+window._fbq = window._fbq || [];
+window._fbq.push(['track', 'PixelInitialized', {}]);
+</SCRIPT>
+<noscript><img height="1" width="1" alt="" style="display:none" src="tr-id=1500628376860149&ev=PixelInitialized" tppabs="https://www.facebook.com/tr?id=1500628376860149&ev=PixelInitialized" /></noscript>
+
+
+
+	</head>
+	<body>
+			<div id="flash" class="flash_html"><div class="agent_notifier_msg a-flash flash_notice">
+
+
+</div>
+</div>
+		
+
+<header id="site_header">
+<div class="section_wrapper" id="top">
+   <a href="index.htm" tppabs="http://support.jwplayer.com/" class="logo">播放机支持瑞草区盘浦洞JW</a>
+<nav>
+<ul>
+<li class="current_page_item"><a href="articles.htm" tppabs="http://support.jwplayer.com/customer/portal/topics/601065-embedding/articles">嵌入</a></li>
+<li><a href="articles-1.htm" tppabs="http://support.jwplayer.com/customer/portal/topics/605644-video-ads/articles">视频广告</a></li>
+<li><a href="articles-2.htm" tppabs="http://support.jwplayer.com/customer/portal/topics/605645-jw-platform/articles">瑞草区盘浦洞JW平台</a></li>
+</ul>
+
+
+
+<span class="subnav_header">登录到开机自检问题 </span>
+<ul class="subnav">
+<li><a href="javascript:if(confirm('http://www.jwplayer.com/innovation/  \n\n�ļ�� Teleport Ultra ��, �Ϊ ��һ��·���Ϊ����ĵ�  \n\n�������?'))window.location='http://www.jwplayer.com/innovation/'" tppabs="http://www.jwplayer.com/innovation/">创新</a></li>
+<li>/ </li>
+<li><a href="javascript:if(confirm('http://www.jwplayer.com/products/  \n\n�ļ�� Teleport Ultra ��, �Ϊ ��һ��·���Ϊ����ĵ�  \n\n�������?'))window.location='http://www.jwplayer.com/products/'" tppabs="http://www.jwplayer.com/products/">产品</a></li>
+<li>/ </li>
+<li><a href="javascript:if(confirm('http://www.jwplayer.com/pricing/  \n\n�ļ�� Teleport Ultra ��, �Ϊ ��һ��·���Ϊ����ĵ�  \n\n�������?'))window.location='http://www.jwplayer.com/pricing/'" tppabs="http://www.jwplayer.com/pricing/">定价</a></li>
+<li>/ </li>
+<li><a href="javascript:if(confirm('http://account.jwplayer.com/support  \n\n�ļ�� Teleport Ultra ��, �Ϊ ��һ��·���Ϊ����ĵ�  \n\n�������?'))window.location='http://account.jwplayer.com/support'" tppabs="http://support.jwplayer.com/customer/en/authentication/multipass?return_to=%2Fcustomer%2Fportal%2Farticles%2F1913755-troubleshooting-your-jw-player-setup">登录</a></li>
+</ul>
+
+
+
+</nav>
+<div class="cap_left">&nbsp;</div>
+<div class="cap_right">&nbsp;</div>
+</div> <!-- section_wrapper -->
+</header> <!-- header -->
+
+
+
+<section id="page_wrapper" class="two_column">
+<div class="section_wrapper clearfix">
+<div class="main">
+     <!--begin:portal_body-->
+
+<!--begin:page_article--><script type="text/javascript">
+$(function(){
+  $("#rate_article div:nth-child(1) a").click(function(){
+    $("#rate_article").css("visibility", "hidden");
+    window.setTimeout(showHello, 1000);
+  }).next().text("");
+
+  $("#rate_article div:nth-child(2) a").click(function(){
+    $("#rate_article").css("visibility", "hidden");
+    window.setTimeout(showHello, 1000);
+  }).next().text("");
+});
+
+function showHello(){
+  $("#rate_article").text("Thank you for your support!");
+  $("#rate_article").css("visibility", "visible");
+  $("<a href=\"mailto:feedback@jwplayer.com\" class=\"feedback_link\">Feedback</a>").insertAfter("#rate_article_container");
+}
+
+$(document).ready(function() {
+  $('#rate_article div:nth-child(1) a').text('I found this article helpful');
+  $('#rate_article div:nth-child(2) a').text('I did not find this article helpful');
+});
+</SCRIPT>
+
+<div class="article">
+<h1>瑞草区盘浦洞JW故障排除您播放器设置 </h1>
+<p class="breadcrumbs">
+
+   <a href="index.htm" tppabs="http://support.jwplayer.com/">主页</a> /
+   <a href="articles.htm" tppabs="http://support.jwplayer.com/customer/portal/topics/601065-embedding/articles">嵌入</a> /
+故障排除您JW播放器...
+
+</p>
+
+<p>如果您遇到一些问题获得您的播放器设置,很有几个,可以采取哪些步骤来。 让我们来细分的步骤上的几个简单图层: </p>
+
+<div class="article_toc">
+<h2>表中的内容 </h2>
+
+<nav>
+<ul>
+	<li><a href="#layer1">1层-介质</a></li>
+	<li><a href="#layer2">2层-瑞草区盘浦洞JW播放器文件/密钥</a></li>
+	<li><a href="#layer3">3层-JW播放器配置</a></li>
+	<li><a href="#layer4">4层-额外的代码/造型</a></li>
+	<li><a href="#layer5">5层-提交支持请求</a></li>
+</ul>
+</nav>
+</div>
+<a name="layer1"></a>
+
+<h1>1层-介质 </h1>
+
+<h2>A-受支持的格式 </h2>
+
+<p>第一件事情就是检查,如果媒体您是嵌入在以下平台上受支持操作系统/浏览器。 我们的 <a href="javascript:if(confirm('http://www.jwplayer.com/html5/formats/  \n\n�ļ�� Teleport Ultra ��, �Ϊ ��һ��·���Ϊ����ĵ�  \n\n�������?'))window.location='http://www.jwplayer.com/html5/formats/'" tppabs="http://www.jwplayer.com/html5/formats/">HTML5报告</a> 应在这里的基础知识。 主要的经验法则是: </p>
+
+<ol>
+	<li>FLV是<strong>不</strong>支持HTML5或移动设备 </li>
+	<li>rtmp<strong></strong>上不支持HTML5或移动设备 </li>
+</ol>
+
+<p>这两种格式需要Flash动画,和根本不起作用,一个HTML5/移动方案。 我们始终建议使用的MP4在&nbsp;FLV由于兼容性移动/HTML5设备。 HLS损益表是另一个流技术,将工作在内部监督办公室和Android。 </p>
+
+<p>最后,如果你使用的是HLS流(M3U8文件),这是当前支持的视频标签内的以下浏览器: </p>
+
+<ul>
+	<li>Safari OSX </li>
+	<li>Safari,内部监督办公室 </li>
+	<li>镀铬的Android </li>
+</ul>
+
+<p>如果您计划使用的台式机、HLS损益的任何其他浏览器,您必须具有高级和瑞草区盘浦洞JW播放器安装闪存。 </p>
+
+<h2>B-访问您的文件 </h2>
+
+<p>如果您未看到您的视频显示,这是一个非常不错的主意,请检查您的网络活动,以确保您的文件中存在的位置,您指点。 此外,如果有一些安全应用,网络错误可能出现在这里。 您可以检查此在镀铬,请右键单击页面,选择“检查滤芯”菜单和导航至“网络”选项卡。 </p>
+<img alt="" src="fi000068..png" tppabs="http://support.jwplayer.com/customer/portal/attachments/424122" style="opacity: 0.9; line-height: 20.7999992370605px; width: 178px; height: 84px;" />
+<p>按下播放,可以看到任何网络活动以红色突出显示将会提醒您任何基于网络的问题。 </p>
+<img alt="" src="fi000067..png" tppabs="http://support.jwplayer.com/customer/portal/attachments/424124" style="width: 267px; height: 125px;" />
+<p>在这里,我们可以看到,我收到一个404错误当访问我的视频文件。 一个404错误只是意味着该文件不存在。 一个403错误就意味着我无法访问此文件是出于安全原因。 对于一个完整的列表的HTTP错误代码,请参阅此页面 <a href="javascript:if(confirm('http://en.wikipedia.org/wiki/List_of_HTTP_status_codes  \n\n�ļ�� Teleport Ultra ��, �Ϊ ��һ��·���Ϊ����ĵ�  \n\n�������?'))window.location='http://en.wikipedia.org/wiki/List_of_HTTP_status_codes'" tppabs="http://en.wikipedia.org/wiki/List_of_HTTP_status_codes"></a>。 </p>
+
+<h2>C-编码/流媒体 </h2>
+
+<p>如果您使用的是一个MP4文件,无法起到瑞草区盘浦洞JW播放器与您,一个良好的故障排除步骤是将文件在一个标准的HTML5视频标签在一个测试页面。 有关更多信息,以了解如何实现这一点,有一个充分的解释在W3C的网站,网 <a href="javascript:if(confirm('http://www.w3schools.com/html/html5_video.asp  \n\n�ļ�� Teleport Ultra ��, �Ϊ ��һ��·���Ϊ����ĵ�  \n\n�������?'))window.location='http://www.w3schools.com/html/html5_video.asp'" tppabs="http://www.w3schools.com/html/html5_video.asp">址</a>。 &nbsp;如果该文件仍然无法在这方面发挥作用,可能有的问题与文件的编码,或一个不支持此文件类型的浏览器本身内。 </p>
+
+<p>如果您的文件类型应该是支持在您的浏览器中,我们建议采用一个重新编码, <a href="javascript:if(confirm('https://handbrake.fr/  \n\n�ļ�� Teleport Ultra ��, �Ϊ ��һ��·���Ϊ����ĵ�  \n\n�������?'))window.location='https://handbrake.fr/'" tppabs="https://handbrake.fr/">手刹</a>。H264与AAC音频是最广泛支持的标准,应该能够发挥最主要浏览器上。 有关更多支持的媒体格式在浏览器中,我们再次建议检查我们的HTML5报告 <a href="javascript:if(confirm('http://www.jwplayer.com/html5/formats/  \n\n�ļ�� Teleport Ultra ��, �Ϊ ��һ��·���Ϊ����ĵ�  \n\n�������?'))window.location='http://www.jwplayer.com/html5/formats/'" tppabs="http://www.jwplayer.com/html5/formats/"></a>。 某些浏览器可能不支持MP4本身的HTML5,可能需要一些像 <a href="javascript:if(confirm('http://www.webmproject.org/  \n\n�ļ�� Teleport Ultra ��, �Ϊ ��һ��·���Ϊ����ĵ�  \n\n�������?'))window.location='http://www.webmproject.org/'" tppabs="http://www.webmproject.org/">WEBM之类</a>。 </p>
+
+<h2>D-crossdomain问题 </h2>
+
+<p>在我们提到的页面 <a href="1403679-crossdomain-file-loading.htm" tppabs="http://support.jwplayer.com/customer/portal/articles/1403679-crossdomain-file-loading">点击此处crossdomain</a>,crossdomain限制可以防止某些文件的加载如果他们都托管在一个单独的域。 请注意,这只会影响到文本文件,例如:M3U8或SMIL清单。 但不管怎样,您应该会看到错误讯息,表明在控制台登录和可能在播放器错误。 访问您的控制台登录可以通过右键单击该页面,选择检查滤芯,然后选择“控制台”选项卡。 缺少一个crossdomain文件将显示在您的控制台登录为: </p>
+<img alt="" src="fi000066..png" tppabs="http://support.jwplayer.com/customer/portal/attachments/424127" style="width: 532px; height: 127px;" />
+<p>如果您COR配置设置不正确,您将会看到以下错误信息: <br />
+<img alt="" src="fi000065..png" tppabs="http://support.jwplayer.com/customer/portal/attachments/424130" style="width: 650px; height: 30px;" />&nbsp;再次,我们建议在我们的网站查找 <a href="1403679-crossdomain-file-loading.htm" tppabs="http://support.jwplayer.com/customer/portal/articles/1403679-crossdomain-file-loading">在这里</a> 更好地理解为一个crossdomain如何接驳工程。 如果您看到这些错误当访问一个资源,播放器将无法播放。 </p>
+<a name="layer2"></a>
+
+<h1>2层-瑞草区盘浦洞JW播放器文件/密钥 </h1>
+
+<p>好的! 您确认,您的媒体文件已经准备好,在您的网页中。 现在,转到图层2:瑞草区盘浦洞JW播放器文件/密钥执行 </p>
+
+<h2>A-访问您播放机媒体库瑞草区盘浦洞JW </h2>
+
+<p>与jw6,您有两个选项,您的播放机。 </p>
+
+<ol>
+	<li><strong>自托管您的播放器文件 </strong></li>
+	<li><strong>云计算托管您的播放器文件 </strong></li>
+</ol>
+
+<p>无论哪一个选项,您可以选择,您将需要确保我们的图书馆是包括在您的网页中。 就象我们上述介质故障排除如果您的播放机出现故障,这是个好主意,确保播放机媒体库正在加载。 我们建议您检查您的网络活动第一次以确保它确实是加载。 这取决于您打算如何实施该播放器,您可能无法看到一个一致的文件名会出现在这里,所以我们不建议确保没有404错误,crossdomain错误,COR问题或在您的网络活动或控制台日志中。 </p>
+
+<h2>B-密钥/许可证 </h2>
+
+<p>如果您不能看到任何问题,你播放器文件加载,恭喜! 现在的时间,确保您的播放机的许可证类型是否设置正确。 </p>
+
+<h3><strong>如果您使用的云计算托管播放器密钥,则您可以跳过这一步骤! 您的播放机将自动包括其许可证! </strong></h3>
+
+<p>如果您已选择自托管您的播放器,您将需要包括您的许可证密钥在页面上。 此密钥将需要下面出现附带的库。 </p>
+
+<p>正确放置jwplayer库和许可证密钥将会出现在您的网页的代码,如: </p>
+
+<pre>
+&lt;script type="text/javascript"src="/scripts/jwplayer/jwplayer.js"&gt;&lt;/Script&gt;
+&lt;script type="text/javascript"&gt;jwplayer.key="abcdefghijklmnop==";&lt;/Script&gt;
+</pre>
+
+<p>如果该播放器显示的是我们的徽标,这是一个非常好的机会,关键是没有正确设置。 再次,它的价值强调您的密钥必须置于该牌手的牌库。 这使我们...... </p>
+
+<h2>C-代码布局 </h2>
+
+<p>如上文所述,处理任何代码播放器配置瑞草区盘浦洞JW应后发生播放器的库是包括在页面上。 由于这一原因,我们强烈建议包括在网页的头部,而不是身体。 任何播放器设置应发生在页面中进一步向下。 为了便于参考,代码在您的网页应该包括在下列顺序: </p>
+
+<ol>
+	<li>播放机媒体库 </li>
+	<li>播放器密钥(如果使用自托管播放机媒体库) </li>
+	<li>一个div的ID相匹配,您的播放机设置代码 </li>
+	<li>播放器设置代码 </li>
+	<li>任何其他API事件侦听器/操作 </li>
+</ol>
+
+<h2>D-常见问题 </h2>
+
+<p>如果您的播放机仍然无法正常工作,我们建议您考虑一下可能的原因: </p>
+
+<h3>是播放器加载正常吗? </h3>
+
+<p>是否有任何错误在您的网络活动或控制台登录? 如果是这样,这些是什么错误? 请记住,一个404意味着文件无法找到。 请检查您的网络路径/许可权限。 如果您仍然可以获得404错误他最后一件事是要确保您jwplayer.flash.SWF和您jwplayer.html5.js是位于同一目录jwplayer.js。 所有三个文件必须位于同一目录中,除非您指定一个备用位置jwplayer配置中使用HTML5播放器和Flashplayer。 但更多的,在图层3。 </p>
+
+<h3>是否有多个播放器库被加载的页面上呢? </h3>
+
+<p>请检查您的网络活动和页面源代码,以确保只有一个jwplayer.js文件被加载。 请注意,jwplayer.js<strong>或</strong>您的云托管库的库,在这里需要加载。jwplayer.flash.SWF和jwplayer.html5.js将自动选择适当,通过jwplayer.js。 有多个播放器加载一次,特别是如果这是一个老年JW5版本,可能会导致播放器配置错误。 您不能使用一个组合的瑞草区盘浦洞JW5和瑞草区盘浦洞JW6嵌入在同一页面上。 </p>
+
+<h3>无效的许可证密钥错误 </h3>
+
+<p>如果你在使用一个试用软件密钥,这消息突然出现,这意味着您的试用版已过期。 如果您收到此复制您的密钥后从您的控制面板,把它的页面上,这意味着您的密钥可能已复制错误。 我们建议您仔细检查,该密钥在您的网页完全一样出现在您的帐户页面在这里。 </p>
+
+<h3>未捕捉到typeerror:未定义不是一个函数 </h3>
+
+<p>这个问题落在第2层和第3层。 您将会看到此错误在控制台登录当播放器设置引用一个DIV,不存在。 确保您的播放机Div和设置是指同一个ID。 如果不这样做,将会使这种错误在控制台登录,会导致播放器不显示。 例如: </p>
+
+<pre>
+&lt;DIV id="myelement"&gt;正在加载播放器......&lt;/div&gt;
+</pre>
+
+<p>需要设置,是指该div的ID,myelement。 这将会如下所示: </p>
+
+<pre>
+jwplayer("myelement").Setup({
+文件:“测试.mp4'
+});
+</pre>
+<a name="layer3"></a>
+
+<h1>3层-JW播放器配置 </h1>
+
+<p>现在,您要确保您的播放机库是得到适当的实施,它的时间,以确保您的&nbsp;配置是合理的,正确的格式。 为了便于参考,一个瑞草区盘浦洞JW播放器配置功能将显示以下内容: </p>
+
+<pre>
+jwplayer("myelement").Setup({
+文件:“test.smil”、
+高度:400,
+rtmp:{
+	securetoken:“abcdefg”
+},
+主:“闪存”,
+控制:false
+});
+
+</pre>
+
+<h2>A-正确的格式 </h2>
+
+<p>有几件事在这里要注意,这将导致一个成功嵌入: </p>
+
+<ul>
+	<li>我们让这两个单引号和双引号的选项及其配置。 使用引号,这是不需要,但使用的智能或风格报价将打破一个播放器设置。 确保所有利用<strong>unstyled报价</strong>。 如果您不确定,请检查您的网页的源代码,确认您是否看到报价。 </li>
+	<li>当设置高度或宽度在您的设置,您应使用一个数字值。 播放机可能会<strong>无法</strong>正常工作如果包括px该值后。 例如:宽度:'400px'将不会正常工作。 </li>
+	<li>如果一个布尔值配置选项(true/false),则不需要引号。 唯一的例外是当设置您的默认源.(播放列表[].来源[].default)报价在这里确实需要。 </li>
+	<li>一个逗号<strong>是</strong>如果需要额外的配置选项如下所示。 例如:
+	<pre>
+主:“闪存”,
+控制:错误
+</pre>
+	主:“闪存”这一行需要一个逗号因为我们都有一个额外下一行,控件:false,则不会,因为它是最后一个选项。 <br />
+	如果一个尾随逗号是不正确地列入在最后一次配置的不同,您可能无法正常工作嵌入在某些浏览器正常。 互联网资源管理器是非常挑剔的尾随逗号,嵌入在您可能会正常运行在其他浏览器。 &nbsp;请注意一个逗号<strong></strong>之后还需要配置块的rtmp,因为附加选项下面。 </li>
+</ul>
+
+<h2>B-不受支持的配置 </h2>
+
+<h3>使用自动移动 </h3>
+
+<p>设置自动启动:真正在移动设备(如Android或IOS<strong></strong>当前不支持由于操作系统本身。 这将不会中断播放器,但它不会自动开始。 </p>
+
+<h3>响应高度为100% </h3>
+
+<p>Firefox有一些问题在高度:“100%”的配置。 目前,我们建议您使用宽度的百分比与一个宽高比的最佳兼容性。 </p>
+<a name="layer4"></a>
+
+<h1>4层-额外的代码/造型 </h1>
+
+<p>您的播放机现在应该播放内容。 太棒了! 最困难的部分。 但是,有几个额外的外部项目,可能会影响您的播放器的外观和行为。 我们这些在这里: </p>
+
+<h2>A-造型和HTML5视频(你好,我的视频”) </h2>
+
+<p>当HTML5视频标签是利用一个页面上,偶尔有一些造型可能出现的问题。 例如,在一个主题内置媒体造型的外观可以影响的一个视频对象和导致一个冲突与JW播放器显示。 一个常见的症状,这是显示我们所能控制的酒吧,和一张海报映像,但却没有实际视频。 音频可能会听到和可能反应,暂停、寻求和全屏显示,但实际在线播放时可能会丢失。 要诊断该问题,我们建议您设置您的播放器,使在<strong>闪存中</strong>作为一个主.(主:“闪存”),&nbsp;因为我们正在处理视频现在闪存中,播放应不受外部造型和正确显示。 如果闪存中正确显示,您可能需要检查该元素在一个浏览器,例如镀铬和切换不同造型选项以查看问题所在。 通常情况下,造型与媒体元素将是罪魁祸首。 </p>
+
+<h2>B-其他代码冲突 </h2>
+
+<p>最简单的方法之一来解决您在瑞草区盘浦洞JW播放器嵌入您的设置在一个简单、unstyled页面,没有额外的代码库或造型。 能够让一个播放器,开始/功能是否正常。 一旦您已经证实了这一点,我们建议把样式/库一次一个)。 </p>
+<a name="layer5"></a>
+
+<h1>5层-提交支持请求/错误报告 </h1>
+
+<p>如果您已经遵循所有上述故障诊断步骤,并相信,仍无法正常工作,这时可能会接触到我们的技术支持团队。 能够将一个播放器从一个冲突问题或配置的问题,有助于大大加快一项决议。 诞神女,任何工作,这项工作可以在您的最终要找到一个播放器的具体问题将会大大增加周转时间。 为了正确地提交错误报告,我们的技术支持团队,我们需要以下信息: </p>
+
+<ol>
+	<li>一个链接,一个unstyled页面显示该播放器问题。 这应该是在一个<strong>实时环境</strong>,而不是一个附带的HTML文档。 我们需要这种接近生产环境,以便评估网络条件,确认播放机本身有故障。 </li>
+	<li>一个详细描述出现问题和故障排除步骤已经采取了。 请包含任何特定的浏览器或设备上发生的问题。 </li>
+	<li>预期结果与实际结果。 再次,保持此尽可能的简单。 如果问题是一方面与一个执行您的工作状态,包括详细地说明您的代码部分功能。 </li>
+</ol>
+
+<p>再一次,更多的细节是较少问题,我们的技术支持团队将需要再问。 更为清晰的,我们在进行故障排除时,我们可以更快地得到解决。 </p>
+
+
+
+
+
+<div id="rate_article_container">
+<div id="rate_article_login">
+<div>
+请 <a href="javascript:if(confirm('http://account.jwplayer.com/support  \n\n�ļ�� Teleport Ultra ��, �Ϊ ��һ��·���Ϊ����ĵ�  \n\n�������?'))window.location='http://account.jwplayer.com/support'" tppabs="http://support.jwplayer.com/customer/en/authentication/multipass?return_to=%2Fcustomer%2Fportal%2Farticles%2F1913755-troubleshooting-your-jw-player-setup">登录</a> 以离开您的反馈意见对这一条。
+</div>
+</div>
+</div>
+
+
+
+
+
+</div><!--end:page_article-->
+
+<!--end:portal_body-->
+</div> <!-- main -->
+
+<div class="sidebar">
+
+<form action="http://support.jwplayer.com/customer/portal/articles/search" method='get' id='support-search' class='support-search-small'>
+<fieldset id="support_search">
+<input id="q2" maxlength='100' name='q' type='text' value='' placeholder="Search Support">
+<input id='support-search-submit' type='submit' value='Search' />
+</fieldset> <!-- support_search -->
+</form>
+
+
+<nav>
+<h2>选择一个主题: </h2>
+<ul>
+
+
+
+
+
+<li class="active"><a href="articles.htm" tppabs="http://support.jwplayer.com/customer/portal/topics/601065-embedding/articles">嵌入</a></li>
+
+
+
+<li><a href="articles-4.htm" tppabs="http://support.jwplayer.com/customer/portal/topics/601064-customization/articles">自定义</a></li>
+
+
+
+<li><a href="articles-5.htm" tppabs="http://support.jwplayer.com/customer/portal/topics/564477-streaming/articles">数据流</a></li>
+
+
+
+<li><a href="articles-6.htm" tppabs="http://support.jwplayer.com/customer/portal/topics/564476-analytics/articles">分析</a></li>
+
+
+
+<li><a href="articles-1.htm" tppabs="http://support.jwplayer.com/customer/portal/topics/605644-video-ads/articles">视频广告</a></li>
+
+
+
+<li><a href="articles-7.htm" tppabs="http://support.jwplayer.com/customer/portal/topics/677400-tv-casting/articles">广播电视</a></li>
+
+
+
+<li><a href="articles-2.htm" tppabs="http://support.jwplayer.com/customer/portal/topics/605645-jw-platform/articles">瑞草区盘浦洞JW平台</a></li>
+
+
+
+<li><a href="articles-8.htm" tppabs="http://support.jwplayer.com/customer/portal/topics/710907-mobile-sdks/articles">移动SDK</a></li>
+
+
+
+<li><a href="articles-9.htm" tppabs="http://support.jwplayer.com/customer/portal/topics/564475-javascript-api/articles">JavaScript API</a></li>
+
+
+
+<li><a href="articles-10.htm" tppabs="http://support.jwplayer.com/customer/portal/topics/635789-platform-api/articles">平台的API</a></li>
+
+
+
+
+
+</ul>
+</nav> <!-- sidebar_nav -->
+
+     <!--
+      <div class="sidebar_promo">
+        <h3>Don't Have JW Player?</h3>
+        <a href="http://www.jwplayer.com" class="promo_button">Get It Here <span class="icon">&nbsp;</span></a>
+      </div>
+      -->
+     <!-- sidebar_promo -->
+
+<div id="sidebar_twitter">
+<h3>我们继续关注: </h3>
+       <a href="javascript:if(confirm('http://twitter.com/jwpsupport  \n\n�ļ�� Teleport Ultra ��, �Ϊ ��һ��·���Ϊ����ĵ�  \n\n�������?'))window.location='http://twitter.com/jwpsupport'" tppabs="http://twitter.com/jwpsupport">@jwpsupport</a>
+       <a href="javascript:if(confirm('http://twitter.com/jwplatform  \n\n�ļ�� Teleport Ultra ��, �Ϊ ��һ��·���Ϊ����ĵ�  \n\n�������?'))window.location='http://twitter.com/jwplatform'" tppabs="http://twitter.com/jwplatform">@jwplatform</a>
+</div> <!-- sidebar_twitter -->
+</div> <!-- sidebar -->
+</div> <!-- section_wrapper -->
+</section> <!-- page_wrapper -->
+
+<section id="player_bottom_promo">
+<div class="section_wrapper">
+<h2>仍然没有瑞草区盘浦洞JW播放器呢? <a class="promo_button" href="javascript:if(confirm('http://www.jwplayer.com/sign-up/  \n\n�ļ�� Teleport Ultra ��, �Ϊ ��һ��·���Ϊ����ĵ�  \n\n�������?'))window.location='http://www.jwplayer.com/sign-up/'" tppabs="http://www.jwplayer.com/sign-up/">点击此处获得 <span></span></a></h2>
+</div><!-- /.section_wrapper -->
+</section> <!-- player_bottom_promo -->
+
+
+<footer id="site_footer">
+<section id="footer_links">
+<div class="section_wrapper clearfix">
+<div id="player_column" class="nav_column">
+<h4>解决方案 </h4>
+<ul>
+<li><a href="javascript:if(confirm('http://www.jwplayer.com/publishers-broadcasters/  \n\n�ļ�� Teleport Ultra ��, �Ϊ ��һ��·���Ϊ����ĵ�  \n\n�������?'))window.location='http://www.jwplayer.com/publishers-broadcasters/'" tppabs="http://www.jwplayer.com/publishers-broadcasters/">出版商和广播公司</a></li>
+<li><a href="javascript:if(confirm('http://www.jwplayer.com/syndication-networks/  \n\n�ļ�� Teleport Ultra ��, �Ϊ ��һ��·���Ϊ����ĵ�  \n\n�������?'))window.location='http://www.jwplayer.com/syndication-networks/'" tppabs="http://www.jwplayer.com/syndication-networks/">广告和网络协同内容</a></li>
+<li><a href="javascript:if(confirm('http://www.jwplayer.com/developers-agencies/  \n\n�ļ�� Teleport Ultra ��, �Ϊ ��һ��·���Ϊ����ĵ�  \n\n�������?'))window.location='http://www.jwplayer.com/developers-agencies/'" tppabs="http://www.jwplayer.com/developers-agencies/"></a>开发人员和机构 </li>
+<li><a href="javascript:if(confirm('http://www.jwplayer.com/enterprise-brands/  \n\n�ļ�� Teleport Ultra ��, �Ϊ ��һ��·���Ϊ����ĵ�  \n\n�������?'))window.location='http://www.jwplayer.com/enterprise-brands/'" tppabs="http://www.jwplayer.com/enterprise-brands/">企业和品牌</a></li>
+<li><a href="javascript:if(confirm('http://www.jwplayer.com/oem-partner/  \n\n�ļ�� Teleport Ultra ��, �Ϊ ��һ��·���Ϊ����ĵ�  \n\n�������?'))window.location='http://www.jwplayer.com/oem-partner/'" tppabs="http://www.jwplayer.com/oem-partner/">OEM合作伙伴</a></li>
+</ul>
+</div> <!-- nav_column -->
+<div id="company_column" class="nav_column">
+<h4>产品 </h4>
+<ul>
+<li><a href="javascript:if(confirm('http://www.jwplayer.com/products/player/  \n\n�ļ�� Teleport Ultra ��, �Ϊ ��һ��·���Ϊ����ĵ�  \n\n�������?'))window.location='http://www.jwplayer.com/products/player/'" tppabs="http://www.jwplayer.com/products/player/">瑞草区盘浦洞JW播放器</a></li>
+<li><a href="javascript:if(confirm('http://www.jwplayer.com/products/jwplayer-ads/  \n\n�ļ�� Teleport Ultra ��, �Ϊ ��һ��·���Ϊ����ĵ�  \n\n�������?'))window.location='http://www.jwplayer.com/products/jwplayer-ads/'" tppabs="http://www.jwplayer.com/products/jwplayer-ads/">瑞草区盘浦洞JW广告</a></li>
+<li><a href="javascript:if(confirm('http://www.jwplayer.com/products/jwplatform/  \n\n�ļ�� Teleport Ultra ��, �Ϊ ��һ��·���Ϊ����ĵ�  \n\n�������?'))window.location='http://www.jwplayer.com/products/jwplatform/'" tppabs="http://www.jwplayer.com/products/jwplatform/">瑞草区盘浦洞JW平台</a></li>
+<li><a href="javascript:if(confirm('http://www.jwplayer.com/products/mobile-sdk  \n\n�ļ�� Teleport Ultra ��, �Ϊ ��һ��·���Ϊ����ĵ�  \n\n�������?'))window.location='http://www.jwplayer.com/products/mobile-sdk'" tppabs="http://www.jwplayer.com/products/mobile-sdk">移动SDK</a></li>
+<li><a href="javascript:if(confirm('http://www.jwplayer.com/products/publisher-analytics  \n\n�ļ�� Teleport Ultra ��, �Ϊ ��һ��·���Ϊ����ĵ�  \n\n�������?'))window.location='http://www.jwplayer.com/products/publisher-analytics'" tppabs="http://www.jwplayer.com/products/publisher-analytics">发布器分析</a></li>
+<li><a href="javascript:if(confirm('http://www.jwplayer.com/contact-us/  \n\n�ļ�� Teleport Ultra ��, �Ϊ ��һ��·���Ϊ����ĵ�  \n\n�������?'))window.location='http://www.jwplayer.com/contact-us/'" tppabs="http://www.jwplayer.com/contact-us/">联系我们</a></li>
+</ul>
+</div> <!-- nav_column -->
+<div id="platform_column" class="nav_column">
+<h4>支持 </h4>
+<ul>
+<li><a href="articles-3.htm" tppabs="http://support.jwplayer.com/customer/portal/topics/601063-frequently-asked-questions/articles">常见问题</a></li>
+<li><a href="index.htm" tppabs="http://support.jwplayer.com/">支持文章</a></li>
+<li><a href="javascript:if(confirm('http://www.jwplayer.com/wizard/  \n\n�ļ�� Teleport Ultra ��, �Ϊ ��һ��·���Ϊ����ĵ�  \n\n�������?'))window.location='http://www.jwplayer.com/wizard/'" tppabs="http://www.jwplayer.com/wizard/">设置向导</a></li>
+<li><a href="javascript:if(confirm('http://www.jwplayer.com/download/  \n\n�ļ�� Teleport Ultra ��, �Ϊ ��һ��·���Ϊ����ĵ�  \n\n�������?'))window.location='http://www.jwplayer.com/download/'" tppabs="http://www.jwplayer.com/download/">下载信息</a></li>
+<li><a href="javascript:if(confirm('http://www.longtailvideo.com/support/open-video-ads/  \n\n�ļ�� Teleport Ultra ��, �Ϊ ��һ��·���Ϊ����ĵ�  \n\n�������?'))window.location='http://www.longtailvideo.com/support/open-video-ads/'" tppabs="http://www.longtailvideo.com/support/open-video-ads/">打开视频广告</a></li>
+<li><a href="1413089-javascript-api-reference.htm" tppabs="http://support.jwplayer.com/customer/portal/articles/1413089-javascript-api-reference">播放器API</a></li>
+<li><a href="javascript:if(confirm('http://apidocs.jwplayer.com/  \n\n�ļ�� Teleport Ultra ��, �Ϊ ��һ��·���Ϊ����ĵ�  \n\n�������?'))window.location='http://apidocs.jwplayer.com/'" tppabs="http://apidocs.jwplayer.com/">平台的API</a></li>
+</ul>
+</div> <!-- nav_column -->
+<div id="quicklinks_column" class="nav_column">
+<h4>创新 </h4>
+<ul>
+<li><a href="javascript:if(confirm('http://www.jwplayer.com/html5/  \n\n�ļ�� Teleport Ultra ��, �Ϊ ��һ��·���Ϊ����ĵ�  \n\n�������?'))window.location='http://www.jwplayer.com/html5/'" tppabs="http://www.jwplayer.com/html5/">HTML5报告</a></li>
+<li><a href="javascript:if(confirm('http://www.jwplayer.com/trends/  \n\n�ļ�� Teleport Ultra ��, �Ϊ ��һ��·���Ϊ����ĵ�  \n\n�������?'))window.location='http://www.jwplayer.com/trends/'" tppabs="http://www.jwplayer.com/trends/">趋势报告</a></li>
+<li><a href="javascript:if(confirm('http://www.jwplayer.com/innovation/research/  \n\n�ļ�� Teleport Ultra ��, �Ϊ ��һ��·���Ϊ����ĵ�  \n\n�������?'))window.location='http://www.jwplayer.com/innovation/research/'" tppabs="http://www.jwplayer.com/innovation/research/">研究</a></li>
+<li><a href="javascript:if(confirm('http://www.jwplayer.com/innovation/experiments/  \n\n�ļ�� Teleport Ultra ��, �Ϊ ��һ��·���Ϊ����ĵ�  \n\n�������?'))window.location='http://www.jwplayer.com/innovation/experiments/'" tppabs="http://www.jwplayer.com/innovation/experiments/">实验</a></li>
+<li><a href="javascript:if(confirm('http://www.jwplayer.com/innovation/roadmap/  \n\n�ļ�� Teleport Ultra ��, �Ϊ ��һ��·���Ϊ����ĵ�  \n\n�������?'))window.location='http://www.jwplayer.com/innovation/roadmap/'" tppabs="http://www.jwplayer.com/innovation/roadmap/">路线图</a></li>
+</ul>
+</div> <!-- nav_column -->
+</div> <!-- section_wrapper -->
+</section> <!-- footer_links -->
+<section id="footer_copyright">
+<div class="section_wrapper">
+<p style="margin-left:-100px;">版权所有©2014筏广告解决方案。 保留所有权利。 筏视频是一个注册商标。 &nbsp;<a href="javascript:if(confirm('http://www.jwplayer.com/tos/  \n\n�ļ�� Teleport Ultra ��, �Ϊ ��һ��·���Ϊ����ĵ�  \n\n�������?'))window.location='http://www.jwplayer.com/tos/'" tppabs="http://www.jwplayer.com/tos/">服务条款</a> / <a href="javascript:if(confirm('http://www.jwplayer.com/privacy/  \n\n�ļ�� Teleport Ultra ��, �Ϊ ��һ��·���Ϊ����ĵ�  \n\n�������?'))window.location='http://www.jwplayer.com/privacy/'" tppabs="http://www.jwplayer.com/privacy/">隐私政策</a> / <a href="javascript:if(confirm('http://www.jwplayer.com/privacy/  \n\n�ļ�� Teleport Ultra ��, �Ϊ ��һ��·���Ϊ����ĵ�  \n\n�������?'))window.location='http://www.jwplayer.com/privacy/#cookies'" tppabs="http://www.jwplayer.com/privacy/#cookies">ad选项</a> / <a href="javascript:if(confirm('http://www.jwplayer.com/dmca/  \n\n�ļ�� Teleport Ultra ��, �Ϊ ��һ��·���Ϊ����ĵ�  \n\n�������?'))window.location='http://www.jwplayer.com/dmca/'" tppabs="http://www.jwplayer.com/dmca/">DMCA</a></p>
+     <a class="made_in_ny" href="javascript:if(confirm('http://wearemadeinny.com/  \n\n�ļ�� Teleport Ultra ��, �Ϊ ��һ��·���Ϊ����ĵ�  \n\n�������?'))window.location='http://wearemadeinny.com/'" tppabs="http://wearemadeinny.com/" rel="nofollow" target="_blank">在纽约所作</a>
+<span class="logo">瑞草区盘浦洞JW播放器 </span>
+<p style="position: absolute; width: 100%; margin: 0; bottom: 0;"><a href="javascript:if(confirm('http://www.desk.com/  \n\n�ļ�� Teleport Ultra ��, �Ϊ ��һ��·���Ϊ����ĵ�  \n\n�������?'))window.location='http://www.desk.com/'" tppabs="http://www.desk.com/">客户服务软件</a> 由desk.com </p>
+</div> <!-- section_wrapper -->
+</section> <!-- footer_copyright -->
+</footer> <!-- footer -->
+
+<!-- External Variables for Portal Header -->
+<div id="desk-external-variables-header" class="desk-external-variables" style="display: none;">
+<div id="read_only"></div>
+<div id="site-default_mailbox">supportdesk@jwplayer.com </div>
+<div id="desk_javascript_host">http://assets1.desk.com/ </div>
+<div id="twitter_enabled">False </div>
+<div id="twitter_username">服务台 </div>
+<div id="system-snippets-loading">加载 </div>
+<div id="system-snippets-seconds_ago">几秒前 </div>
+<div id="system-snippets-a_minute_ago">一分钟前 </div>
+<div id="system-snippets-minutes_ago">分钟前 </div>
+<div id="system-snippets-an_hour_ago">一个小时前 </div>
+<div id="system-snippets-hours_ago">小时前 </div>
+<div id="system-snippets-a_day_ago">前一天 </div>
+<div id="system-snippets-days_ago">天前 </div>
+<div id="system-snippets-about">关于 </div>
+<div id="enable_gs">False </div>
+<div id="system-snippets-invalid_characters_found">找到无效字符 </div>
+<div id="site-search_autocomplete_articles_url">/客户/en/portal/文章/自动完成功能 </div>
+<div id="search-term"></div>
+
+</div>
+
+<script type="text/javascript" src="desk.portal.shared-1.js" tppabs="http://assets1.desk.com/portal/desk.portal.shared.js"></SCRIPT>
+<script type="text/javascript" src="desk.portal.header-1.js" tppabs="http://assets1.desk.com/portal/desk.portal.header.js"></SCRIPT>
+<script type="text/javascript" src="desk.portal.body.layout_footer-1.js" tppabs="http://assets1.desk.com/portal/desk.portal.body.layout_footer.js"></SCRIPT>
+
+<!-- Start GA Code -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','analytics.js'/*tpa=http://www.google-analytics.com/analytics.js*/,'ga');
+ga('create', 'UA-42148455-1', 'http://support.jwplayer.com/customer/portal/articles/support.jwplayer.com');
+ga('send', 'pageview');
+</SCRIPT>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1047558004;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</SCRIPT>
+<script type="text/javascript" src="conversion.js" tppabs="http://www.googleadservices.com/pagead/conversion.js">
+</SCRIPT>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="-value=0&guid=ON&script=0.gif" tppabs="http://googleads.g.doubleclick.net/pagead/viewthroughconversion/1047558004/?value=0&guid=ON&script=0"/>
+</div>
+</noscript>
+
+
+	</body>
+</html>
